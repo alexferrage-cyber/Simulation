@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Simulateur de succession — comparaison des options</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12181E" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-title" content="Succession">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20aria-hidden%3D%22true%22%3E%3Cpath%20d%3D%22M6%2025L24%209.5L42%2025%22%20fill%3D%22none%22%20stroke%3D%22%25238C2F39%22%20stroke-width%3D%224.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cg%20fill%3D%22%25238C2F39%22%3E%3Ccircle%20cx%3D%2213%22%20cy%3D%2235%22%20r%3D%223.2%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2235%22%20r%3D%223.2%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2235%22%20r%3D%223.2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+/* ============================================================
+   Palette : encre notariale / papier / cire à cacheter
+   ============================================================ */
+:root{
+  --paper:#FBFAF7; --paper-2:#F2F0EA; --card:#FFFFFF;
+  --ink:#16202B; --ink-2:#3D4A57; --ink-3:#6B7783;
+  --line:#DCD8CF; --line-2:#EAE7E0;
+  --seal:#8C2F39;        /* accent : cire à cacheter */
+  --sage:#3F6E4E;        /* favorable */
+  --amber:#9A6B12;       /* à arbitrer */
+  --rouge:#A33A2E;       /* coûteux / risque */
+  --gris:#5F6B76;        /* à vérifier */
+  --sage-bg:#EDF3EE; --amber-bg:#FBF3E2; --rouge-bg:#FAEDEA; --gris-bg:#F0F1F2; --seal-bg:#F7ECEC;
+  --r:10px; --w:1160px;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --disp:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#12181E; --paper-2:#0D1216; --card:#1A222A;
+    --ink:#E8E6E1; --ink-2:#B9BFC6; --ink-3:#8B949D;
+    --line:#2C3742; --line-2:#232C35;
+    --seal:#D98A90; --sage:#7FB98F; --amber:#DCAE5A; --rouge:#E08E80; --gris:#9AA5B0;
+    --sage-bg:#18291F; --amber-bg:#2A2416; --rouge-bg:#2B1B18; --gris-bg:#1E242A; --seal-bg:#2A1D1F;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.5;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+h1,h2,h3,h4{font-family:var(--disp); font-weight:600; letter-spacing:-.01em; margin:0}
+h1{font-size:1.35rem; line-height:1.2}
+h2{font-size:1.25rem; margin:0 0 .2rem}
+h3{font-size:1.02rem; margin:0 0 .35rem}
+h4{font-size:.92rem; margin:0 0 .3rem}
+p{margin:.4rem 0}
+a{color:var(--seal)}
+.num,.money,td.n,th.n{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- Bandeau ---------- */
+.banner{
+  background:var(--seal-bg); border-bottom:1px solid var(--line);
+  color:var(--ink); padding:.55rem 1rem; font-size:.78rem; line-height:1.35;
+  position:relative;
+}
+.banner b{color:var(--seal)}
+header.top{
+  padding:.9rem 1rem .7rem; border-bottom:1px solid var(--line); background:var(--paper);
+}
+header.top .wrap{max-width:var(--w); margin:0 auto; display:flex; gap:.35rem .9rem; align-items:baseline; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:.55rem; min-width:0}
+.brand svg{width:32px; height:32px; color:var(--seal); flex:0 0 auto}
+@media(max-width:420px){ .brand svg{width:27px; height:27px} }
+header.top .sub{font-size:.78rem; color:var(--ink-3)}
+
+/* ---------- Onglets ---------- */
+nav.tabs{
+  position:sticky; top:0; z-index:30; background:var(--paper);
+  border-bottom:1px solid var(--line); overflow-x:auto; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs ol{
+  display:flex; gap:0; list-style:none; margin:0 auto; padding:0 .4rem; max-width:var(--w);
+}
+nav.tabs button{
+  appearance:none; background:none; border:none; border-bottom:2px solid transparent;
+  color:var(--ink-3); font:inherit; font-size:.83rem; padding:.7rem .7rem .55rem;
+  white-space:nowrap; cursor:pointer;
+}
+nav.tabs button .idx{font-family:var(--mono); font-size:.7rem; opacity:.6; margin-right:.3rem}
+nav.tabs button[aria-selected="true"]{color:var(--seal); border-bottom-color:var(--seal); font-weight:600}
+nav.tabs button:focus-visible{outline:2px solid var(--seal); outline-offset:-2px}
+
+main{max-width:var(--w); margin:0 auto; padding:1rem .8rem 4rem}
+section[role=tabpanel][hidden]{display:none}
+
+/* ---------- Cartes ---------- */
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+  padding:.85rem .9rem; margin:0 0 .8rem;
+}
+.card>h3:first-child{margin-top:0}
+.card .hint{font-size:.78rem; color:var(--ink-3); margin:.25rem 0 0}
+.grid{display:grid; gap:.8rem}
+@media(min-width:760px){ .grid.c2{grid-template-columns:1fr 1fr} .grid.c3{grid-template-columns:repeat(3,1fr)} .grid.c4{grid-template-columns:repeat(4,1fr)} }
+.tone-v{border-left:3px solid var(--sage); background:var(--sage-bg)}
+.tone-o{border-left:3px solid var(--amber); background:var(--amber-bg)}
+.tone-r{border-left:3px solid var(--rouge); background:var(--rouge-bg)}
+.tone-g{border-left:3px solid var(--gris); background:var(--gris-bg)}
+
+/* ---------- Contrôles ---------- */
+.ctl{margin:0 0 .75rem}
+.ctl:last-child{margin-bottom:0}
+.ctl>label,.lbl{display:flex; align-items:center; gap:.3rem; font-size:.82rem; color:var(--ink-2); margin:0 0 .3rem; font-weight:500}
+.ctl .row{display:flex; align-items:center; gap:.6rem}
+input[type=range]{flex:1; min-width:0; accent-color:var(--seal); height:26px}
+input[type=number],input[type=text],input[type=date],select{
+  font:inherit; font-family:var(--mono); font-size:.87rem; color:var(--ink);
+  background:var(--paper); border:1px solid var(--line); border-radius:6px;
+  padding:.38rem .45rem; width:100%; min-width:0;
+}
+select{font-family:var(--body)}
+input[type=number]{width:8.5rem; flex:0 0 auto; text-align:right}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--seal); outline-offset:1px}
+.chk{display:flex; align-items:flex-start; gap:.5rem; font-size:.85rem; margin:.4rem 0; color:var(--ink-2)}
+.chk input{margin-top:.2rem; accent-color:var(--seal); width:1.05rem; height:1.05rem; flex:0 0 auto}
+.field{display:flex; flex-direction:column; gap:.25rem}
+.field>span{font-size:.78rem; color:var(--ink-3)}
+
+button.btn{
+  appearance:none; font:inherit; font-size:.8rem; cursor:pointer;
+  background:var(--card); color:var(--ink); border:1px solid var(--line);
+  border-radius:999px; padding:.42rem .8rem;
+}
+button.btn:hover{border-color:var(--seal); color:var(--seal)}
+button.btn.primary{background:var(--seal); border-color:var(--seal); color:#fff}
+@media(prefers-color-scheme:dark){ button.btn.primary{color:#12181E} }
+.btns{display:flex; flex-wrap:wrap; gap:.4rem}
+
+/* ---------- Bulles “?” ---------- */
+.q{
+  appearance:none; border:1px solid var(--line); background:var(--paper-2); color:var(--ink-3);
+  width:17px; height:17px; border-radius:50%; font-size:11px; line-height:1; cursor:pointer;
+  font-family:var(--mono); flex:0 0 auto; padding:0;
+}
+.q:hover{border-color:var(--seal); color:var(--seal)}
+#pop{
+  position:fixed; z-index:100; max-width:min(340px,calc(100vw - 24px));
+  background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:0 10px 34px rgba(0,0,0,.18); padding:.7rem .8rem; font-size:.82rem; line-height:1.45;
+}
+#pop[hidden]{display:none}
+#pop h4{margin:0 0 .25rem}
+#pop .close{position:absolute; top:.3rem; right:.4rem; border:none; background:none; color:var(--ink-3); cursor:pointer; font-size:1rem}
+.lvl{display:inline-block; font-size:.66rem; text-transform:uppercase; letter-spacing:.06em;
+  padding:.1rem .4rem; border-radius:4px; font-weight:700; margin-bottom:.35rem}
+.lvl.ok{background:var(--sage-bg); color:var(--sage)}
+.lvl.chk{background:var(--gris-bg); color:var(--gris)}
+.lvl.risk{background:var(--rouge-bg); color:var(--rouge)}
+
+/* ---------- Chiffres ---------- */
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.5rem}
+.kpi{border:1px solid var(--line); border-radius:8px; padding:.5rem .6rem; background:var(--card)}
+.kpi .k{font-size:.7rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-3); display:block; line-height:1.25}
+.kpi .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.15rem; font-weight:600; display:block; margin-top:.15rem}
+.kpi.big .v{font-size:1.5rem}
+
+/* ---------- Tables ---------- */
+.tw{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:.5rem -.9rem -.85rem; padding:0 .9rem .85rem}
+table{border-collapse:collapse; width:100%; font-size:.8rem; min-width:520px}
+th,td{padding:.42rem .5rem; text-align:left; border-bottom:1px solid var(--line-2); vertical-align:top}
+thead th{font-size:.7rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-3); font-weight:600; border-bottom:1px solid var(--line)}
+td.n,th.n{text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+tbody tr:hover{background:var(--paper-2)}
+table.sticky th:first-child,table.sticky td:first-child{position:sticky; left:0; background:var(--card)}
+tbody tr:hover td:first-child{background:var(--paper-2)}
+
+/* ---------- Signature : barre des quotités ---------- */
+.quot{margin:.5rem 0 .3rem}
+.quot .bar{display:flex; height:30px; border:1px solid var(--line); border-radius:6px; overflow:hidden}
+.quot .seg{position:relative; font-size:.62rem; font-family:var(--mono); color:#fff; display:flex;
+  align-items:center; justify-content:center; overflow:hidden; white-space:nowrap}
+.seg.pp-mere{background:var(--seal)}
+.seg.usu{
+  background:repeating-linear-gradient(45deg,var(--gris) 0 5px,transparent 5px 10px), var(--sage);
+  color:#fff;
+}
+.seg.np{background:var(--sage); opacity:.55; color:#fff; border-left:1px solid rgba(255,255,255,.45)}
+.seg.ppenf{background:var(--sage); color:#fff; border-left:1px solid rgba(255,255,255,.45)}
+@media(prefers-color-scheme:dark){ .seg{color:#0D1216} }
+.legend{display:flex; flex-wrap:wrap; gap:.7rem; font-size:.7rem; color:var(--ink-3); margin-top:.35rem}
+.legend i{display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:.25rem; vertical-align:-1px}
+.legend .l1{background:var(--seal)} .legend .l2{background:repeating-linear-gradient(45deg,var(--gris) 0 4px,transparent 4px 8px),var(--sage)}
+.legend .l3{background:var(--sage); opacity:.55} .legend .l4{background:var(--sage)}
+
+/* ---------- Graphiques ---------- */
+.chart{width:100%; height:auto; display:block; overflow:visible}
+.chart .axis{stroke:var(--line); stroke-width:1}
+.chart .glab{font-size:9px; fill:var(--ink-3); font-family:var(--mono)}
+.chart .gval{font-size:9px; fill:var(--ink-2); font-family:var(--mono)}
+
+/* ---------- Divers ---------- */
+.badge{display:inline-block; font-size:.68rem; padding:.1rem .4rem; border-radius:4px; font-weight:700; letter-spacing:.03em}
+.b-v{background:var(--sage-bg); color:var(--sage)} .b-o{background:var(--amber-bg); color:var(--amber)}
+.b-r{background:var(--rouge-bg); color:var(--rouge)} .b-g{background:var(--gris-bg); color:var(--gris)}
+.sep{border:none; border-top:1px solid var(--line-2); margin:.8rem 0}
+details{border:1px solid var(--line); border-radius:8px; padding:.5rem .65rem; margin:.5rem 0; background:var(--card)}
+details>summary{cursor:pointer; font-size:.84rem; font-weight:600; color:var(--ink-2)}
+details[open]>summary{margin-bottom:.5rem}
+.calc{font-family:var(--mono); font-size:.74rem; line-height:1.6; white-space:pre-wrap; color:var(--ink-2)}
+.mini{font-size:.75rem; color:var(--ink-3)}
+.frac{font-family:var(--mono); font-size:.9em}
+ul.tight{margin:.3rem 0; padding-left:1.1rem} ul.tight li{margin:.15rem 0; font-size:.85rem}
+.toast{position:fixed; left:50%; transform:translateX(-50%); bottom:1.2rem; z-index:200;
+  background:var(--ink); color:var(--paper); padding:.5rem .9rem; border-radius:999px; font-size:.8rem}
+.toast[hidden]{display:none}
+.scnhead{display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap}
+.scnhead .tag{font-family:var(--mono); font-size:.75rem; color:var(--seal); font-weight:700}
+.warn{font-size:.78rem; color:var(--rouge); margin:.35rem 0 0}
+#errors:empty{display:none}
+
+@media (prefers-reduced-motion: reduce){ *{transition:none!important; animation:none!important} }
+@media print{
+  nav.tabs,.btns,#pop,.toast{display:none!important}
+  section[role=tabpanel][hidden]{display:block!important}
+  body{background:#fff; color:#000; font-size:11px}
+  .card{break-inside:avoid; border:1px solid #ccc}
+  table{min-width:0}
+  .tw{overflow:visible}
+}
+</style>
+</head>
+<body>
+<div class="banner">
+  <b>Simulation indicative.</b> À faire valider par notaire/fiscaliste. Les règles fiscales sont paramétrables.
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 25L24 9.5L42 25" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle cx="13" cy="35" r="3.2"/><circle cx="24" cy="35" r="3.2"/><circle cx="35" cy="35" r="3.2"/></g></svg><h1>Succession — comparaison des options</h1></div>
+    <span class="sub">Options du conjoint survivant, coût de rachat d'une part indivise, second décès</span>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <ol id="tablist" role="tablist"></ol>
+</nav>
+
+<main>
+  <div id="errors"></div>
+  <section role="tabpanel" id="p-hyp"></section>
+  <section role="tabpanel" id="p-opt" hidden></section>
+  <section role="tabpanel" id="p-rachat" hidden></section>
+  <section role="tabpanel" id="p-mere" hidden></section>
+  <section role="tabpanel" id="p-vente" hidden></section>
+  <section role="tabpanel" id="p-fin" hidden></section>
+  <section role="tabpanel" id="p-synth" hidden></section>
+  <section role="tabpanel" id="p-expl" hidden></section>
+</main>
+
+<div id="pop" hidden role="dialog" aria-label="Explication"></div>
+<div id="toast" class="toast" hidden></div>
+<input type="file" id="fileimport" accept="application/json,.json" hidden>
+<script>
+"use strict";
+/* ============================================================================
+   1. CONSTANTES ET ÉTAT
+   ========================================================================== */
+
+const HEIRS = [
+  {id:'f1', name:'Fils 1', son:true},
+  {id:'f2', name:'Fils 2', son:true},
+  {id:'f3', name:'Fils 3', son:true},
+  {id:'fille', name:'Fille (1er mariage)', son:false}
+];
+const BENEFS = [{id:'mere',name:'Mère'},{id:'f1',name:'Fils 1'},{id:'f2',name:'Fils 2'},
+                {id:'f3',name:'Fils 3'},{id:'fille',name:'Fille'}];
+
+/* Configuration générique des 4 options. Les 4 fonctions nommées demandées
+   (calcScenarioUsufruit100, etc.) sont des enveloppes de computeScenario(). */
+const SCEN = [
+  {id:'A', tag:'A', short:'100 % US',        label:'100 % usufruit',
+   ppShare:0,    usufOnRest:1, ddv:true,  renonce:false},
+  {id:'B', tag:'B', short:'1/4 PP + 3/4 US', label:'1/4 pleine propriété + 3/4 usufruit',
+   ppShare:0.25, usufOnRest:1, ddv:true,  renonce:false},
+  {id:'C', tag:'C', short:'1/4 PP',          label:'1/4 pleine propriété seulement',
+   ppShare:0.25, usufOnRest:0, ddv:false, renonce:false}
+];
+
+const USU_TABLE = [
+  {max:20, u:90}, {max:30, u:80}, {max:40, u:70}, {max:50, u:60}, {max:60, u:50},
+  {max:70, u:40}, {max:80, u:30}, {max:90, u:20}, {max:999, u:10}
+];
+
+function defaults(){
+  const assets = [
+    {id:'cb_pere', nom:'Comptes bancaires du père',        montant:0, prop:'pere', regime:'succ'},
+    {id:'cb_mere', nom:'Comptes bancaires de la mère',     montant:0, prop:'mere', regime:'succ'},
+    {id:'ct_pere', nom:'Compte-titres du père',            montant:0, prop:'pere', regime:'succ'},
+    {id:'ct_mere', nom:'Compte-titres de la mère',         montant:0, prop:'mere', regime:'succ'},
+    {id:'pea',     nom:'PEA',                              montant:0, gains:0, prop:'commun', regime:'pea'},
+    {id:'autres',  nom:'Autres actifs',                    montant:0, prop:'commun', regime:'succ'},
+    {id:'dettes',  nom:'Dettes (passif)',                  montant:0, prop:'commun', regime:'passif'},
+    {id:'obseq',   nom:'Frais funéraires',                 montant:0, prop:'pere',   regime:'obseques'},
+    {id:'pea2',    nom:'PEA — gains latents',              montant:0, gains:0, prop:'commun', regime:'pea'}
+  ];
+  const avSplit = () => ({mere:100, f1:0, f2:0, f3:0, fille:0});
+  return {
+    /* --- patrimoine immobilier --- */
+    maisonValeur:0, partPere:50, partMere:50,
+    /* --- famille --- */
+    naissanceMere:'1960-01-01', decesPere:'2026-01-01',
+    ageAuto:true, usufruitRate:40,
+    nbFils:3, nbEnfantsPere:4,
+    /* --- fiscalité --- */
+    abattement:100000,
+    donationsActives:true, donationAnnee:2015,
+    don:{ f1:{pere:0,mere:0}, f2:{pere:0,mere:0}, f3:{pere:0,mere:0}, fille:{pere:0,mere:0} },
+    bareme:[[8072,5],[12109,10],[15932,15],[552324,20],[902838,30],[1805677,40],[Infinity,45]],
+    ddvPresente:true,
+    /* --- actifs financiers --- */
+    assets,
+    av:{
+      pereAvant70:{primes:0, split:avSplit()},
+      pereApres70:{primes:0, gains:0, split:avSplit()},
+      mereAvant70:{primes:0, split:{mere:0,f1:33.34,f2:33.33,f3:33.33,fille:0}},
+      mereApres70:{primes:0, gains:0, split:{mere:0,f1:33.34,f2:33.33,f3:33.33,fille:0}},
+      abatAvant70:152500, taux1:20, seuil1:700000, taux2:31.25,
+      abatApres70:30500, conjointExonere:true, taxerGains70plus:false
+    },
+    tauxNonParent:60, tauxPS:17.2, plafondObseques:1500,
+    /* --- rachat --- */
+    rachatActif:true,
+    prix:{A:0, B:0, C:0},
+    fraisRachat:2.5,
+    /* --- horizon / vente --- */
+    anneesDecesMere:20, croissance:0, consoMere:0,
+    venteQuand:'apres_mere', anneesVente:20,
+    pvTaux:36.2, pvAbattement:true, pvExoResidence:false
+  };
+}
+
+/** Jeu de démonstration : chiffres ronds et fictifs, aucune donnée réelle. */
+function exemple(){
+  const d = defaults();
+  d.maisonValeur = 1000000;
+  d.don.f1.mere = 50000; d.donationAnnee = 2015;
+  d.assets.find(a=>a.id==='cb_pere').montant = 60000;
+  d.assets.find(a=>a.id==='cb_mere').montant = 30000;
+  d.av.pereAvant70.primes = 100000;
+  d.av.pereAvant70.split = {mere:100,f1:0,f2:0,f3:0,fille:0};
+  d.prix = {A:75000, B:56250, C:93750};
+  d.croissance = 2; d.anneesVente = 20;
+  return d;
+}
+
+/* ---------------------------------------------------------------------------
+   Sauvegarde locale. Les valeurs restent dans le navigateur de la personne,
+   sur son appareil. Rien n'est transmis, rien n'est écrit dans le dépôt.
+   Si le navigateur la refuse (navigation privée, aperçu intégré), on bascule
+   sur une mémoire volatile et l'interface le signale.
+   --------------------------------------------------------------------------- */
+const CLE = 'succ.v2';
+const STORE = (function(){
+  let dispo = false, mem = null;
+  try{ localStorage.setItem(CLE+'.t','1'); localStorage.removeItem(CLE+'.t'); dispo = true; }
+  catch(e){ dispo = false; }
+  return {
+    get dispo(){ return dispo; },
+    lire(){  try{ return dispo ? localStorage.getItem(CLE) : mem; }catch(e){ return mem; } },
+    ecrire(v){ try{ if(dispo) localStorage.setItem(CLE, v); else mem = v; }catch(e){ mem = v; } }
+  };
+})();
+
+let saveTimer = null;
+
+/** Écrit l'état courant. Appelé automatiquement après chaque modification. */
+function sauvegarder(){
+  try{
+    const copie = JSON.parse(JSON.stringify(S));
+    copie.bareme = copie.bareme.map(b=>[isFinite(b[0])?b[0]:null, b[1]]);
+    STORE.ecrire(JSON.stringify(copie));
+  }catch(e){/* sans effet : la simulation continue */}
+}
+function planifierSauvegarde(){ clearTimeout(saveTimer); saveTimer = setTimeout(sauvegarder, 700); }
+
+/** Relit la sauvegarde au démarrage. La clé porte un numéro de version :
+ *  une mise à jour du simulateur qui changerait la structure repart proprement. */
+function charger(){
+  const brut = STORE.lire();
+  if(!brut) return false;
+  try{
+    const d = JSON.parse(brut);
+    S = Object.assign(defaults(), d);
+    S.bareme = (d.bareme||defaults().bareme).map(b=>[b[0]===null?Infinity:b[0], b[1]]);
+    return true;
+  }catch(e){ return false; }
+}
+
+let S = defaults();
+let R = null;               // résultats calculés
+let ACTIVE = 'p-hyp';
+
+/* ============================================================================
+   2. HELPERS
+   ========================================================================== */
+const NF  = new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+const NF2 = new Intl.NumberFormat('fr-FR',{maximumFractionDigits:2});
+function formatEuro(v){ if(!isFinite(v)) return '—'; return NF.format(Math.round(v)); }
+function pct(v,d){ return NF2.format(Number(v).toFixed(d===undefined?1:d))+' %'; }
+function num(v){ const n = parseFloat(String(v).replace(/[^\d.,-]/g,'').replace(',','.')); return isFinite(n)?n:0; }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function get(path){ return path.split('.').reduce((o,k)=>o==null?o:o[k], S); }
+function set(path,val){
+  const ks = path.split('.'); const last = ks.pop();
+  const o = ks.reduce((o,k)=>o[k], S); o[last]=val;
+}
+function $(sel,root){ return (root||document).querySelector(sel); }
+function toast(msg){
+  const t=$('#toast'); t.textContent=msg; t.hidden=false;
+  clearTimeout(t._t); t._t=setTimeout(()=>t.hidden=true,2200);
+}
+
+/* ============================================================================
+   3. MOTEUR DE CALCUL
+   ========================================================================== */
+
+/** Âge de la mère (années révolues) au décès du père. */
+function ageMere(){
+  const n = new Date(S.naissanceMere), d = new Date(S.decesPere);
+  if(isNaN(n)||isNaN(d)) return 67;
+  let a = d.getFullYear()-n.getFullYear();
+  const m = d.getMonth()-n.getMonth();
+  if(m<0 || (m===0 && d.getDate()<n.getDate())) a--;
+  return a;
+}
+
+/** Taux d'usufruit fiscal (art. 669 CGI). */
+function calcUsufruitRate(age){
+  if(age===undefined) age = ageMere();
+  if(!S.ageAuto) return S.usufruitRate/100;
+  for(const r of USU_TABLE) if(age<=r.max) return r.u/100;
+  return 0.1;
+}
+function calcBareOwnershipRate(age){ return 1 - calcUsufruitRate(age); }
+
+/** Droits de succession en ligne directe, barème progressif.
+ *  @returns {{base,abattementUtilise,droits,tranches:[]}} */
+function baremeTax(base){
+  let reste = Math.max(0, base||0), prev = 0, droits = 0; const tranches = [];
+  for(const [plafond, taux] of S.bareme){
+    if(reste<=0) break;
+    const largeur = plafond - prev, dedans = Math.min(reste, largeur);
+    if(dedans>0){ const d = dedans*taux/100; droits += d;
+      tranches.push({de:prev, a:prev+dedans, taux, assiette:dedans, droits:d}); }
+    reste -= dedans; prev = plafond;
+  }
+  return {droits, tranches};
+}
+
+/** Droits de succession en ligne directe.
+ *  Méthode différentielle : la donation rapportée consomme l'abattement ET les tranches
+ *  basses (art. 784 CGI), au lieu de seulement réduire l'abattement. */
+function calcInheritanceTax(montant, abattementDispo, donationsAnterieures){
+  const donations = S.donationsActives ? (donationsAnterieures||0) : 0;
+  const abat = abattementDispo||0;
+  const abatUtil = Math.max(0, abat - donations);
+  const baseTotale = Math.max(0, (montant||0) + donations - abat);
+  const baseDon    = Math.max(0, donations - abat);
+  const tTot = baremeTax(baseTotale), tDon = baremeTax(baseDon);
+  const droits = Math.max(0, tTot.droits - tDon.droits);
+  return {montant:montant||0, abattementDispo:abat, donations, abattementUtilise:abatUtil,
+          base: Math.max(0,(montant||0)-abatUtil), baseTotale, baseDon,
+          droits, droitsBruts:tTot.droits, droitsDonation:tDon.droits,
+          tranches:tTot.tranches, rappelTranches: tDon.droits > 0};
+}
+
+/** Assurance-vie versée avant 70 ans (art. 990 I CGI). */
+function calcLifeInsuranceTax(montantParBenef, isConjoint){
+  const a = S.av;
+  if(isConjoint && a.conjointExonere) return {taxable:0, droits:0, exonere:true};
+  const taxable = Math.max(0, montantParBenef - a.abatAvant70);
+  const t1 = Math.min(taxable, a.seuil1);
+  const t2 = Math.max(0, taxable - a.seuil1);
+  return {taxable, droits: t1*a.taux1/100 + t2*a.taux2/100, exonere:false,
+          t1, t2, tr1:t1*a.taux1/100, tr2:t2*a.taux2/100};
+}
+
+/** Répartit un montant selon une clé en % (objet {benefId:pourcentage}). */
+function split(montant, key){
+  const out={}; for(const b of BENEFS) out[b.id] = montant * ((key[b.id]||0)/100);
+  return out;
+}
+function sumSplit(key){ return BENEFS.reduce((s,b)=>s+(Number(key[b.id])||0),0); }
+
+/** Actifs financiers entrant dans la succession classique. */
+function massesFinancieres(){
+  let finPere=0, finMere=0, passifPere=0, passifMere=0, obsPere=0, obsMere=0, psPea=0;
+  for(const a of S.assets){
+    const partP = a.prop==='pere' ? 1 : a.prop==='commun' ? .5 : 0;
+    const partM = a.prop==='mere' ? 1 : a.prop==='commun' ? .5 : 0;
+    if(a.regime==='passif'){ passifPere += a.montant*partP; passifMere += a.montant*partM; }
+    else if(a.regime==='obseques'){ obsPere += a.montant*partP; obsMere += a.montant*partM; }
+    else if(a.regime==='pea'){
+      // PEA : clôturé au décès. Gains exonérés d'impôt sur le revenu mais soumis
+      // aux prélèvements sociaux, qui viennent en passif de la succession.
+      const ps = (a.gains||0)*S.tauxPS/100;
+      psPea += ps;
+      finPere += a.montant*partP; finMere += a.montant*partM;
+      passifPere += ps*partP; passifMere += ps*partM;
+    }
+    else if(a.regime==='succ'){ finPere += a.montant*partP; finMere += a.montant*partM; }
+  }
+  // Les frais funéraires ne sont déductibles que dans la limite du forfait légal.
+  passifPere += Math.min(obsPere, S.plafondObseques);
+  passifMere += Math.min(obsMere, S.plafondObseques);
+  return {finPere, finMere, passifPere, passifMere, obsPere, obsMere, psPea};
+}
+
+/** Assurance-vie du père : part taxable par bénéficiaire. */
+function avPere(){
+  const a=S.av;
+  const av70m = split(a.pereAvant70.primes, a.pereAvant70.split);
+  const primes70p = split(a.pereApres70.primes, a.pereApres70.split);
+  const gains70p  = split(a.pereApres70.gains,  a.pereApres70.split);
+  // L'abattement global de 30 500 € se répartit entre les seuls bénéficiaires
+  // effectivement soumis aux droits : le conjoint exonéré n'en consomme aucune part.
+  const primesTaxables = BENEFS.reduce((s,b)=>
+    s + ((b.id==='mere' && a.conjointExonere) ? 0 : primes70p[b.id]), 0);
+  const res = {};
+  for(const b of BENEFS){
+    const isConj = b.id==='mere';
+    const av990 = calcLifeInsuranceTax(av70m[b.id], isConj);
+    const quotePart = primesTaxables>0
+      ? ((isConj && a.conjointExonere) ? 0 : primes70p[b.id]/primesTaxables) : 0;
+    const abat70p = a.abatApres70 * quotePart;
+    let reintegre = Math.max(0, primes70p[b.id] - abat70p);
+    if(a.taxerGains70plus) reintegre += gains70p[b.id];
+    if(isConj && a.conjointExonere) reintegre = 0;
+    res[b.id] = {avant70:av70m[b.id], droits990:av990.droits, detail990:av990,
+                 primes70p:primes70p[b.id], gains70p:gains70p[b.id],
+                 abat70p, reintegreSuccession:reintegre};
+  }
+  return res;
+}
+/** Assurance-vie de la mère (dénouée à son décès). */
+function avMere(){
+  const a=S.av;
+  const av70m = split(a.mereAvant70.primes, a.mereAvant70.split);
+  const primes70p = split(a.mereApres70.primes, a.mereApres70.split);
+  const gains70p  = split(a.mereApres70.gains,  a.mereApres70.split);
+  const total = BENEFS.reduce((s,b)=>s+primes70p[b.id],0);
+  const res={};
+  for(const b of BENEFS){
+    const av990 = calcLifeInsuranceTax(av70m[b.id], false);
+    const q = total>0 ? primes70p[b.id]/total : 0;
+    let reintegre = Math.max(0, primes70p[b.id] - a.abatApres70*q);
+    if(a.taxerGains70plus) reintegre += gains70p[b.id];
+    res[b.id]={avant70:av70m[b.id], droits990:av990.droits, detail990:av990,
+               primes70p:primes70p[b.id], gains70p:gains70p[b.id],
+               reintegreSuccession:reintegre};
+  }
+  return res;
+}
+
+/** Facteur de revalorisation de la maison à une échéance donnée. */
+function growth(annees){ return Math.pow(1 + S.croissance/100, annees||0); }
+
+/* -------------------------------------------------------------------------
+   Cœur : un scénario = (quote-part en PP pour la mère, usufruit sur le reste)
+   ------------------------------------------------------------------------- */
+function computeScenario(sc){
+  const np   = calcBareOwnershipRate();
+  const usuR = calcUsufruitRate();
+  const V0   = S.maisonValeur;
+  const G    = growth(S.anneesDecesMere);         // maison au décès de la mère
+  const V1   = V0*G;
+  const maisonPere = V0*S.partPere/100;
+  const maisonMere = V0*S.partMere/100;
+  const {finPere, finMere, passifPere, passifMere} = massesFinancieres();
+  const avP = avPere(), avM = avMere();
+
+  const massePere = Math.max(0, maisonPere + finPere - passifPere);
+  const pp   = sc.ppShare;                        // quote-part PP de la mère
+  const rest = 1 - pp;                            // ce qui revient aux 4 enfants
+  const enUsufruit = sc.usufOnRest ? rest : 0;    // fraction grevée d'usufruit
+  const nbEnf = Math.max(1, S.nbEnfantsPere);
+
+  /* ---- Ce que reçoit chaque enfant du père ---- */
+  const partPleineEnfant  = massePere*rest/nbEnf;                  // valeur pleine future
+  const partFiscaleEnfant = partPleineEnfant*(sc.usufOnRest?np:1); // assiette taxable
+  // ventilation maison seule (utile au rachat)
+  const maisonNetteRest = maisonPere*rest;
+  const maisonPleineEnfant  = maisonNetteRest/nbEnf;
+  const maisonFiscaleEnfant = maisonPleineEnfant*(sc.usufOnRest?np:1);
+  const maisonPartEnfantPct = (S.partPere/100)*rest/nbEnf;          // % de la maison entière
+
+  /* ---- Ce que reçoit la mère au décès du père ---- */
+  const merePP   = massePere*pp;
+  const mereUsuF = massePere*enUsufruit*usuR;      // valeur fiscale de l'usufruit (non taxée)
+  // Sur les sommes d'argent, l'usufruit devient quasi-usufruit (art. 587 C. civ.) :
+  // la mère peut les employer, les enfants détiennent une créance de restitution.
+  // Montant indicatif — VOLONTAIREMENT NON DÉDUIT de la masse de la mère ci-dessous.
+  const creanceQuasiUsufruit = Math.max(0, finPere) * enUsufruit;
+
+  /* ---- Droits au décès du père ---- */
+  const droitsPere = {}; let droitsPereFils=0, droitsPereFille=0, droitsAV=0;
+  for(const h of HEIRS){
+    const reintegre = avP[h.id].reintegreSuccession;
+    const t = calcInheritanceTax(partFiscaleEnfant + reintegre, S.abattement, S.don[h.id].pere);
+    const dav = avP[h.id].droits990;
+    droitsPere[h.id] = {succ:t, droits:t.droits, av990:dav, total:t.droits+dav,
+                        recuFiscal:partFiscaleEnfant, recuPlein:partPleineEnfant, reintegre};
+    if(h.son) droitsPereFils += t.droits+dav; else droitsPereFille += t.droits+dav;
+    droitsAV += dav;
+  }
+
+  /* ---- Succession de la mère ---- */
+  const pctMaisonMere = (S.partMere/100) + pp*(S.partPere/100);
+  const maisonMereFinale = V1*pctMaisonMere;
+  const finMereFinal = Math.max(0, (finMere + finPere*pp) * (1 - S.consoMere/100));
+  const masseMere = Math.max(0, maisonMereFinale + finMereFinal - passifMere);
+  const parFils = masseMere / Math.max(1,S.nbFils);
+  const droitsMere = {}; let droitsMereFils=0, droitsAVMere=0;
+  for(const h of HEIRS){
+    if(!h.son){
+      // La fille n'est pas héritière de la mère. Si elle est bénéficiaire d'un contrat
+      // alimenté après 70 ans, la fraction réintégrée est taxée au tarif entre non-parents.
+      const nonParent = avM[h.id].reintegreSuccession * S.tauxNonParent/100;
+      droitsMere[h.id]={droits:nonParent, base:null, av990:avM[h.id].droits990,
+                        total:nonParent+avM[h.id].droits990, nonParent:true};
+      droitsAVMere+=avM[h.id].droits990; continue; }
+    const t = calcInheritanceTax(parFils + avM[h.id].reintegreSuccession, S.abattement, S.don[h.id].mere);
+    const dav = avM[h.id].droits990;
+    droitsMere[h.id]={succ:t, droits:t.droits, av990:dav, total:t.droits+dav, recu:parFils};
+    droitsMereFils += t.droits+dav; droitsAVMere += dav;
+  }
+
+  /* ---- Patrimoine final des 3 fils ---- */
+  // valeur pleine reçue du père, maison revalorisée à l'extinction de l'usufruit
+  const partFilsPereFuture = maisonPleineEnfant*G + (finPere*rest/nbEnf);
+  // Le capital d'assurance-vie est hors succession : il n'entre pas dans massePere ni
+  // dans masseMere, mais il est bien perçu — et ses droits étaient déjà déduits.
+  const avCapitalFils = HEIRS.filter(h=>h.son).reduce((s,h)=>
+    s + avP[h.id].avant70 + avP[h.id].primes70p + avP[h.id].gains70p
+      + avM[h.id].avant70 + avM[h.id].primes70p + avM[h.id].gains70p, 0);
+  const avCapitalFille = avP.fille.avant70 + avP.fille.primes70p + avP.fille.gains70p
+      + avM.fille.avant70 + avM.fille.primes70p + avM.fille.gains70p;
+  const brutFils = S.nbFils*partFilsPereFuture + masseMere + avCapitalFils;
+  const netFils  = brutFils - droitsPereFils - droitsMereFils;
+
+  /* ---- Fille ---- */
+  const filleFuture = maisonPleineEnfant*G + (finPere*rest/nbEnf) + avCapitalFille;
+  const filleDroits = droitsPereFille + droitsMere.fille.total;
+
+  /* ---- Rachat de la part de la fille ---- */
+  const prixDemande = S.prix[sc.id]||0;
+  const frais = prixDemande*S.fraisRachat/100;
+  const coutRachat = S.rachatActif ? prixDemande+frais : 0;
+  const cashAvantVente = droitsPereFils + coutRachat;
+  const coutTotalFils = droitsPereFils + droitsMereFils + coutRachat;
+
+  return {
+    sc, np, usuR, V0, V1, G, maisonPere, maisonMere, massePere, finPere, finMere, passifPere,
+    pp, rest, enUsufruit, merePP, mereUsuF,
+    partPleineEnfant, partFiscaleEnfant,
+    maisonPleineEnfant, maisonFiscaleEnfant, maisonPartEnfantPct,
+    droitsPere, droitsPereFils, droitsPereFille, droitsAV,
+    pctMaisonMere, maisonMereFinale, finMereFinal, masseMere, parFils,
+    droitsMere, droitsMereFils, droitsAVMere,
+    passifMere, avCapitalFils, avCapitalFille, creanceQuasiUsufruit,
+    droitsTotaux: droitsPereFils+droitsPereFille+droitsMereFils+droitsMere.fille.total,
+    droitsTotauxFils: droitsPereFils+droitsMereFils,
+    brutFils, netFils, netParFils: netFils/Math.max(1,S.nbFils),
+    filleFuture, filleDroits,
+    prixDemande, fraisRachat:frais, coutRachat, cashAvantVente, coutTotalFils,
+    prixFiscal: maisonFiscaleEnfant, prixPleinFutur: maisonPleineEnfant*G,
+    prixPlein0: maisonPleineEnfant
+  };
+}
+
+/* Enveloppes nommées demandées par le cahier des charges */
+function calcScenarioUsufruit100(){ return computeScenario(SCEN[0]); }
+function calcScenarioQuarterPPThreeQuarterUsufruit(){ return computeScenario(SCEN[1]); }
+function calcScenarioQuarterPPOnly(){ return computeScenario(SCEN[2]); }
+
+/** Vente future : ce qui est vendable, bloqué, net d'impôt. */
+function calcFutureSale(r){
+  const n = S.anneesVente;
+  const Vv = S.maisonValeur*growth(n);
+  const pctPPmere   = (S.partMere/100) + r.pp*(S.partPere/100);
+  const pctNPenf    = (S.partPere/100)*r.enUsufruit;
+  const pctPPenf    = (S.partPere/100)*r.rest - pctNPenf;
+  let vendableSansAccordUsufruitier, bloque, contexte;
+  switch(S.venteQuand){
+    case 'apres_pere':
+    case 'vivant_mere':
+      vendableSansAccordUsufruitier = pctPPmere + pctPPenf;
+      bloque = pctNPenf;
+      contexte = "Du vivant de la mère : la vente de la pleine propriété exige l'accord de l'usufruitière ET de tous les nus-propriétaires (art. 815-3 et 621 C. civ.).";
+      break;
+    case 'apres_mere':
+      vendableSansAccordUsufruitier = 1; bloque = 0;
+      contexte = "Après le décès de la mère, l'usufruit est éteint : les héritiers détiennent la pleine propriété (mais restent en indivision).";
+      break;
+    default:
+      vendableSansAccordUsufruitier = 0; bloque = pctNPenf;
+      contexte = "Aucune vente : la maison reste en indivision / démembrement.";
+  }
+  const prixVente = Vv;
+  // valeur d'acquisition fiscale : valeur retenue en succession (+ prix de rachat éventuel)
+  const acqui = S.maisonValeur + (S.rachatActif ? Math.max(0, r.prixDemande - r.maisonPleineEnfant) : 0);
+  const fractionVendue = (S.venteQuand==='apres_mere') ? 1 : vendableSansAccordUsufruitier;
+  let pv = Math.max(0, prixVente - acqui) * fractionVendue;
+  let abattement = 0;
+  if(S.pvAbattement){
+    const d = n;
+    const abIR = d<=5?0 : d>=22?1 : (Math.min(d,21)-5)*0.06 + (d>=22?0.04:0);
+    const abPS = d<=5?0 : d>=30?1 : (d<=21?(d-5)*0.0165 : d===22?0.28 : 0.28+(d-22)*0.09);
+    abattement = (0.19*Math.max(0,1-abIR) + 0.172*Math.max(0,1-abPS));
+  }
+  const tauxEffectif = S.pvExoResidence ? 0 : (S.pvAbattement ? abattement*100 : S.pvTaux);
+  const impotPV = pv*tauxEffectif/100;
+  const brut = prixVente*(S.venteQuand==='apres_mere'?1:vendableSansAccordUsufruitier);
+  return {n, Vv, prixVente, pctPPmere, pctNPenf, pctPPenf, vendable:vendableSansAccordUsufruitier,
+          bloque, contexte, acqui, pv, tauxEffectif, impotPV, brut,
+          netApresVente: brut - impotPV - r.coutRachat - r.droitsPereFils};
+}
+
+/** Recalcule tout. */
+function computeAll(){
+  const map = {};
+  for(const s of SCEN) map[s.id] = computeScenario(s);
+  for(const s of SCEN) map[s.id].vente = calcFutureSale(map[s.id]);
+  // seuil A vs B
+  const A=map.A, B=map.B;
+  const surcoutFiscalB = B.droitsTotauxFils - A.droitsTotauxFils;
+  const economieRachat = A.coutRachat - B.coutRachat;
+  const delta = economieRachat - surcoutFiscalB;
+  const seuil = {surcoutFiscalB, economieRachat, delta,
+    verdict: Math.abs(delta) < 5000 ? 'equiv' : (delta>0 ? 'B' : 'A')};
+  return {map, seuil, np:calcBareOwnershipRate(), usu:calcUsufruitRate(), age:ageMere()};
+}
+/* ============================================================================
+   4. BULLES EXPLICATIVES
+   ========================================================================== */
+const TIPS = {
+  pp:['Pleine propriété','ok','Le droit complet : user du bien, en percevoir les fruits, le vendre. C\'est usufruit + nue-propriété réunis dans la même main.'],
+  usufruit:['Usufruit','ok','L\'usufruit donne à la mère le droit d\'habiter la maison ou d\'en percevoir les loyers. Les nus-propriétaires ont la propriété future, mais pas l\'usage tant que l\'usufruit existe.'],
+  np:['Nue-propriété','ok','La propriété sans l\'usage. Elle devient pleine propriété automatiquement, et sans droits supplémentaires, à l\'extinction de l\'usufruit.'],
+  indivision:['Indivision','risk','Plusieurs personnes propriétaires du même bien sans division matérielle. « Nul ne peut être contraint à demeurer dans l\'indivision » (art. 815 C. civ.) : un seul indivisaire peut demander le partage, donc provoquer la vente.'],
+  ddv:['Donation au dernier vivant','risk','Donation entre époux. Sans elle (ou sans testament), et parce qu\'il existe un enfant non commun, la mère n\'a droit qu\'au quart en pleine propriété (art. 757 C. civ.). Les options A et B en dépendent entièrement : vérifier son existence chez le notaire.'],
+  optA:['Option 100 % usufruit','chk','La mère prend l\'usufruit de toute la succession du père ; les 4 enfants la nue-propriété. Assiette taxable des enfants réduite au taux de nue-propriété. Suppose une donation au dernier vivant ou un testament.'],
+  optB:['Option 1/4 PP + 3/4 usufruit','chk','La mère prend un quart en pleine propriété et l\'usufruit du reste. Elle devient propriétaire d\'une part qui sera retaxée à son décès, mais la part des enfants — donc celle de la fille — diminue.'],
+  abattement:['Abattement parent-enfant','ok','100 000 € par enfant et par parent, reconstitué tous les 15 ans. Les donations reçues du même parent depuis moins de 15 ans s\'imputent dessus.'],
+  bareme:['Barème progressif','ok','Après abattement, la part taxable est découpée en tranches de 5 % à 45 %. Le taux affiché n\'est jamais appliqué à la totalité : seule la fraction dans la tranche subit le taux.'],
+  av70m:['Assurance-vie avant 70 ans','chk','Primes versées avant les 70 ans de l\'assuré : hors succession civile, abattement de 152 500 € par bénéficiaire et par assuré, puis 20 % jusqu\'à 700 000 € taxables et 31,25 % au-delà (art. 990 I CGI). Le conjoint survivant est exonéré.'],
+  av70p:['Assurance-vie après 70 ans','risk','Seules les primes versées après 70 ans sont taxées, après un abattement global de 30 500 € tous bénéficiaires et tous contrats confondus. Les gains produits par ces primes sont en principe exonérés (art. 757 B CGI) — à confirmer contrat par contrat.'],
+  pv:['Plus-value immobilière','risk','Prix de vente moins valeur d\'acquisition. En succession, la valeur d\'acquisition est celle déclarée dans la déclaration de succession. 19 % d\'impôt + 17,2 % de prélèvements sociaux, avec abattements pour durée de détention (exonération totale à 22 ans pour l\'impôt, 30 ans pour les prélèvements sociaux). Résidence principale du vendeur : exonérée.'],
+  soulte:['Rachat de soulte / de part','chk','Racheter la part d\'un cohéritier. Entre héritiers issus de la même succession, l\'opération peut relever du droit de partage (2,5 %) plutôt que des droits de vente (5,80 %) : l\'écart est important, à faire trancher par le notaire.'],
+  valeur:['Valeur fiscale vs prix négocié','risk','La valeur fiscale de la nue-propriété sert à calculer les droits. Elle ne force pas la fille à vendre à ce prix. Une vente amiable suppose un accord. Elle peut demander plus, mais les autres peuvent refuser.'],
+  extinction:['Extinction de l\'usufruit','ok','Au décès de l\'usufruitier, la nue-propriété devient pleine propriété sans nouvelle taxation (art. 1133 CGI). C\'est le principal levier d\'économie des options avec usufruit.'],
+  nonCommun:['Enfant non commun','ok','La fille du père hérite du père comme les autres enfants du père. En revanche, elle n\'hérite pas automatiquement de la mère si elle n\'est pas son enfant.'],
+  reserve:['Réserve héréditaire','ok','Avec 4 enfants, la réserve est de 3/4 de la succession et la quotité disponible de 1/4. Un enfant ne peut pas être privé de sa réserve.'],
+  quasi:['Quasi-usufruit','risk','Sur les sommes d\'argent, l\'usufruitier peut les dépenser (art. 587 C. civ.) ; les nus-propriétaires détiennent une créance de restitution sur sa succession. À sécuriser par une convention écrite et enregistrée, sinon la créance est difficile à faire valoir.'],
+  conversion:['Conversion de l\'usufruit en rente','risk','Tout nu-propriétaire — la fille comprise — peut demander en justice la conversion de l\'usufruit du conjoint en rente viagère (art. 759 C. civ.). Le juge ne peut pas l\'imposer sur le logement principal du conjoint (art. 760). C\'est le principal levier de pression de la fille dans les options A et B.'],
+  logement:['Droit viager au logement','ok','Le conjoint survivant qui occupait le logement à titre de résidence principale bénéficie d\'un droit d\'habitation viager (art. 764 C. civ.), y compris s\'il renonce à la succession. Il doit le réclamer dans l\'année.'],
+  differe:['Paiement différé des droits','chk','Les droits dus sur une nue-propriété peuvent être payés de façon différée, jusqu\'à six mois après la réunion de l\'usufruit (art. 397 ann. III CGI), moyennant garanties et intérêts. Cela change radicalement le besoin de trésorerie immédiat.'],
+  recel:['Rapport des donations','chk','Une donation antérieure peut être rapportable civilement (elle se réintègre au partage) en plus de s\'imputer fiscalement sur l\'abattement. Les deux mécanismes sont distincts : ce simulateur ne traite que l\'aspect fiscal.']
+};
+
+function tip(key){ return TIPS[key] ? `<button class="q" type="button" data-tip="${key}" aria-label="Explication">?</button>` : ''; }
+
+function openTip(key, anchor){
+  const t = TIPS[key]; if(!t) return;
+  const p = $('#pop');
+  const lvl = t[1]==='ok'?'<span class="lvl ok">Confirmé</span>'
+            : t[1]==='risk'?'<span class="lvl risk">Risque</span>'
+            : '<span class="lvl chk">À vérifier</span>';
+  p.innerHTML = `<button class="close" type="button" aria-label="Fermer">×</button>${lvl}<h4>${esc(t[0])}</h4><div>${esc(t[2])}</div>`;
+  p.hidden = false;
+  const r = anchor.getBoundingClientRect();
+  const w = p.offsetWidth, h = p.offsetHeight;
+  let left = Math.min(Math.max(8, r.left - w/2 + r.width/2), innerWidth - w - 8);
+  let top  = r.bottom + 8; if(top + h > innerHeight - 8) top = Math.max(8, r.top - h - 8);
+  p.style.left = left+'px'; p.style.top = top+'px';
+  p.querySelector('.close').onclick = ()=> p.hidden = true;
+}
+document.addEventListener('click', e=>{
+  const q = e.target.closest('.q');
+  if(q){ e.preventDefault(); openTip(q.dataset.tip, q); return; }
+  if(!e.target.closest('#pop')) $('#pop').hidden = true;
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') $('#pop').hidden = true; });
+
+/* ============================================================================
+   5. FABRIQUES DE CONTRÔLES
+   ========================================================================== */
+
+/** Curseur + champ numérique synchronisés. */
+function slider(path, o){
+  const v = get(path);
+  return `<div class="ctl" data-ctl="${path}">
+    <label>${esc(o.label)}${o.tip?tip(o.tip):''}</label>
+    <div class="row">
+      <input type="range" data-bind="${path}" data-kind="range" min="${o.min}" max="${o.max}" step="${o.step||1}" value="${v}" aria-label="${esc(o.label)}">
+      <input type="number" data-bind="${path}" data-kind="number" min="${o.min}" max="${o.max}" step="${o.step||1}" value="${v}" aria-label="${esc(o.label)} (valeur)">
+      ${o.unit?`<span class="mini">${o.unit}</span>`:''}
+    </div>
+    ${o.hint?`<p class="hint">${o.hint}</p>`:''}
+  </div>`;
+}
+function numfield(path, label, o){
+  o=o||{};
+  return `<div class="ctl"><label>${esc(label)}${o.tip?tip(o.tip):''}</label>
+    <input type="number" data-bind="${path}" data-kind="number" step="${o.step||1}" value="${get(path)}" style="width:100%">
+    ${o.hint?`<p class="hint">${o.hint}</p>`:''}</div>`;
+}
+function checkbox(path, label, o){
+  o=o||{};
+  return `<label class="chk"><input type="checkbox" data-bind="${path}" data-kind="check" ${get(path)?'checked':''}>
+    <span>${esc(label)}${o.tip?tip(o.tip):''}</span></label>`;
+}
+function selectf(path, label, opts, o){
+  o=o||{};
+  const v = get(path);
+  return `<div class="ctl"><label>${esc(label)}${o.tip?tip(o.tip):''}</label>
+    <select data-bind="${path}" data-kind="select">
+      ${opts.map(([val,txt])=>`<option value="${esc(val)}" ${String(v)===String(val)?'selected':''}>${esc(txt)}</option>`).join('')}
+    </select></div>`;
+}
+function datefield(path,label){
+  return `<div class="ctl"><label>${esc(label)}</label>
+    <input type="date" data-bind="${path}" data-kind="text" value="${get(path)}"></div>`;
+}
+function kpi(k, v, cls){ return `<div class="kpi ${cls||''}"><span class="k">${esc(k)}</span><span class="v">${v}</span></div>`; }
+
+/* Barre des quotités — l'élément signature. */
+function quotBar(r){
+  const segs=[];
+  const ppM = r.pp*100, usu = r.enUsufruit*100, ppE = (r.rest - r.enUsufruit)*100;
+  if(ppM>0.5) segs.push(`<div class="seg pp-mere" style="width:${ppM}%" title="Mère, pleine propriété">${ppM>=12?'Mère PP':''}</div>`);
+  if(usu>0.5) segs.push(`<div class="seg usu" style="width:${usu}%" title="Usufruit mère / nue-propriété des 4 enfants">${usu>=25?'Usufruit mère — NP 4 enfants':''}</div>`);
+  if(ppE>0.5) segs.push(`<div class="seg ppenf" style="width:${ppE}%" title="Pleine propriété des 4 enfants">${ppE>=20?'PP 4 enfants':''}</div>`);
+  return `<div class="quot"><div class="bar">${segs.join('')}</div>
+    <div class="legend">
+      <span><i class="l1"></i>Mère en pleine propriété</span>
+      <span><i class="l2"></i>Usufruit mère + nue-propriété enfants</span>
+      <span><i class="l4"></i>Enfants en pleine propriété</span>
+    </div>
+    <p class="mini">Répartition de la succession du père (${formatEuro(r.massePere)}).</p></div>`;
+}
+
+/* ============================================================================
+   6. ONGLET 1 — HYPOTHÈSES
+   ========================================================================== */
+function renderHyp(){
+  const age = ageMere();
+  const tr = USU_TABLE.find(r=>age<=r.max);
+  return `
+  <div class="card">
+    <h2>Hypothèses de départ</h2>
+    <p class="hint">${STORE.dispo
+      ? 'Le fichier publié ne contient aucun chiffre. Vos valeurs sont enregistrées automatiquement dans ce navigateur, sur cet appareil seulement. « Tout remettre à zéro » efface aussi cette sauvegarde.'
+      : '<b>Ce navigateur refuse l\'enregistrement local</b> (navigation privée ou aperçu intégré). Les valeurs ne tiendront que le temps de la session : exportez-les en JSON avant de fermer.'}</p>
+    <div class="btns" style="margin-top:.6rem">
+      <button class="btn primary" data-act="reset">Tout remettre à zéro</button>
+      <button class="btn" data-act="demo">Charger le jeu d'exemple</button>
+      <button class="btn" data-act="preset05">Maison 500 000 €</button>
+      <button class="btn" data-act="preset10">Maison 1 000 000 €</button>
+      <button class="btn" data-act="preset20">Maison 2 000 000 €</button>
+      <button class="btn" data-act="export">Exporter en JSON</button>
+      <button class="btn" data-act="import">Importer un JSON</button>
+      <button class="btn" data-act="print">Imprimer / PDF</button>
+    </div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card">
+      <h3>La maison</h3>
+      ${slider('maisonValeur',{label:'Valeur de la maison aujourd\'hui',min:0,max:5000000,step:10000,hint:'<span class="num">'+formatEuro(S.maisonValeur)+'</span>'})}
+      ${slider('partPere',{label:'Quote-part du père',min:0,max:100,step:1,unit:'%',tip:'pp',
+        hint:'Part du père : <span class="num">'+formatEuro(S.maisonValeur*S.partPere/100)+'</span>'})}
+      ${slider('partMere',{label:'Quote-part de la mère',min:0,max:100,step:1,unit:'%',
+        hint:'Part de la mère : <span class="num">'+formatEuro(S.maisonValeur*S.partMere/100)+'</span>'})}
+      <p class="hint">Le régime matrimonial conditionne cette répartition (communauté, séparation de biens, clause de préciput). À confirmer sur l\'acte d\'achat et le contrat de mariage.</p>
+    </div>
+
+    <div class="card">
+      <h3>La famille</h3>
+      ${datefield('naissanceMere','Date de naissance de la mère')}
+      ${datefield('decesPere','Date du décès du père')}
+      <div class="kpis" style="margin:.5rem 0">
+        ${kpi('Âge fiscal de la mère', age+' ans')}
+        ${kpi('Tranche art. 669 CGI', (tr?tr.u:40)+' % / '+(100-(tr?tr.u:40))+' %')}
+      </div>
+      ${checkbox('ageAuto','Calculer l\'usufruit automatiquement depuis l\'âge')}
+      ${slider('usufruitRate',{label:'Usufruit fiscal (si calcul manuel)',min:10,max:90,step:10,unit:'%',tip:'usufruit',
+        hint:'Nue-propriété correspondante : '+(100-S.usufruitRate)+' %'})}
+      ${slider('nbFils',{label:'Nombre de fils héritiers de la mère',min:1,max:8,step:1})}
+      ${slider('nbEnfantsPere',{label:'Nombre total d\'enfants du père',min:1,max:8,step:1,tip:'nonCommun'})}
+    </div>
+  </div>
+
+  <div class="card ${S.ddvPresente?'tone-v':'tone-r'}">
+    <h3>Donation au dernier vivant ${tip('ddv')}</h3>
+    ${checkbox('ddvPresente','Une donation entre époux (ou un testament) existe')}
+    <p class="hint">${S.ddvPresente
+      ? 'Les options A (100 % usufruit) et B (1/4 PP + 3/4 usufruit) sont ouvertes à la mère.'
+      : '<b>Sans donation au dernier vivant ni testament, et parce qu\'il existe un enfant non commun, la mère n\'a droit qu\'au quart en pleine propriété (art. 757 C. civ.). Les options A et B sont alors indisponibles</b> — elles restent affichées ici à titre de comparaison, mais elles ne sont pas exerçables en l\'état.'}</p>
+  </div>
+
+  <div class="card">
+    <h3>Abattements et donations antérieures ${tip('abattement')}</h3>
+    ${slider('abattement',{label:'Abattement parent-enfant',min:0,max:200000,step:1000,
+      hint:'<span class="num">'+formatEuro(S.abattement)+'</span> par enfant et par parent'})}
+    ${checkbox('donationsActives','Imputer les donations antérieures sur l\'abattement',{tip:'recel'})}
+    ${numfield('donationAnnee','Année de la donation la plus ancienne prise en compte')}
+    <div class="tw"><table>
+      <thead><tr><th>Héritier</th><th class="n">Donation reçue du père</th><th class="n">Donation reçue de la mère</th></tr></thead>
+      <tbody>${HEIRS.map(h=>`<tr><td>${h.name}</td>
+        <td class="n"><input type="number" data-bind="don.${h.id}.pere" data-kind="number" step="1000" value="${S.don[h.id].pere}" style="width:8rem"></td>
+        <td class="n"><input type="number" data-bind="don.${h.id}.mere" data-kind="number" step="1000" value="${S.don[h.id].mere}" style="width:8rem"></td></tr>`).join('')}</tbody>
+    </table></div>
+    ${(()=>{ const ans = new Date(S.decesPere).getFullYear() - S.donationAnnee;
+      return ans<15 ? `<p class="warn">⚠ La donation de ${S.donationAnnee} a moins de 15 ans au décès du père (${ans} ans) : elle s\'impute sur l\'abattement. Le rappel fiscal cesse à 15 ans révolus, soit en ${S.donationAnnee+15}.</p>` : `<p class="hint">La donation de ${S.donationAnnee} a plus de 15 ans : l\'abattement est reconstitué en totalité.</p>`;})()}
+  </div>
+
+  <div class="card">
+    <h3>Barème en ligne directe ${tip('bareme')}</h3>
+    <div class="tw"><table>
+      <thead><tr><th class="n">Jusqu'à</th><th class="n">Taux</th></tr></thead>
+      <tbody>${S.bareme.map((b,i)=>`<tr>
+        <td class="n">${isFinite(b[0])?`<input type="number" data-bareme="${i}" data-col="0" value="${b[0]}" step="1" style="width:8rem">`:'au-delà'}</td>
+        <td class="n"><input type="number" data-bareme="${i}" data-col="1" value="${b[1]}" step="0.05" style="width:5rem"> %</td></tr>`).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Horizon de la simulation</h3>
+    ${slider('anneesDecesMere',{label:'Années avant le décès de la mère (hypothèse)',min:0,max:40,step:1,
+      hint:'Hypothèse purement financière, utilisée pour revaloriser la maison et mesurer la durée du blocage. La mère aurait '+(age+S.anneesDecesMere)+' ans.'})}
+    ${slider('croissance',{label:'Croissance annuelle de la maison',min:-3,max:8,step:.5,unit:'%/an',
+      hint:'Maison au décès de la mère : <span class="num">'+formatEuro(S.maisonValeur*growth(S.anneesDecesMere))+'</span>'})}
+    ${slider('consoMere',{label:'Part du patrimoine financier consommée par la mère',min:0,max:100,step:5,unit:'%'})}
+  </div>`;
+}
+
+/* ============================================================================
+   7. ONGLET 2 — OPTIONS SUCCESSORALES
+   ========================================================================== */
+function scenarioCard(r){
+  const s = r.sc;
+  const indispo = s.ddv && !S.ddvPresente;
+  const tipKey = {A:'optA',B:'optB',C:'pp'}[s.id];
+  const note = {
+    A:'Assiette taxable des enfants la plus faible : la fille est taxée sur la nue-propriété seulement. En contrepartie elle ne touche rien avant le décès de la mère.',
+    B:'La part de la fille baisse d\'un quart, mais le quart pris en pleine propriété par la mère sera retaxé à son décès entre les 3 fils.',
+    C:'Option légale de droit commun en présence d\'un enfant non commun : disponible sans donation au dernier vivant. La fille est immédiatement en pleine propriété : elle peut provoquer le partage.',
+  }[s.id];
+  const tone = {A:'tone-v',B:'tone-o',C:'tone-o'}[s.id];
+  return `<div class="card ${indispo?'tone-g':tone}">
+    <div class="scnhead"><span class="tag">${s.tag}</span><h3>${esc(s.label)} ${tip(tipKey)}</h3>
+      ${indispo?'<span class="badge b-g">Indisponible sans donation au dernier vivant</span>':''}</div>
+    ${quotBar(r)}
+    <div class="kpis">
+      ${kpi('Mère — pleine propriété', formatEuro(r.merePP))}
+      ${kpi('Mère — usufruit (valeur fiscale)', formatEuro(r.mereUsuF))}
+      ${kpi('Par enfant — valeur fiscale', formatEuro(r.partFiscaleEnfant))}
+      ${kpi('Par enfant — valeur pleine future', formatEuro(r.partPleineEnfant))}
+    </div>
+    <hr class="sep">
+    <div class="tw"><table>
+      <thead><tr><th>Héritier</th><th class="n">Assiette taxable</th><th class="n">Abattement</th><th class="n">Base</th><th class="n">Droits au décès du père</th><th class="n">Droits au décès de la mère</th></tr></thead>
+      <tbody>
+      ${HEIRS.map(h=>{const dp=r.droitsPere[h.id], dm=r.droitsMere[h.id];
+        return `<tr><td>${h.name}</td>
+        <td class="n">${formatEuro(dp.succ.montant)}</td>
+        <td class="n">${formatEuro(dp.succ.abattementUtilise)}</td>
+        <td class="n">${formatEuro(dp.succ.base)}</td>
+        <td class="n">${formatEuro(dp.total)}</td>
+        <td class="n">${h.son?formatEuro(dm.total):'<span class="mini">n\'hérite pas</span>'}</td></tr>`}).join('')}
+        <tr><td><b>Mère</b></td><td class="n">${formatEuro(r.merePP)}</td><td class="n">—</td><td class="n">—</td>
+          <td class="n"><span class="badge b-v">exonérée</span></td><td class="n">—</td></tr>
+      </tbody>
+    </table></div>
+    <div class="kpis" style="margin-top:.6rem">
+      ${kpi('Droits totaux des 3 fils', formatEuro(r.droitsTotauxFils),'big')}
+      ${kpi('Droits totaux de la fille', formatEuro(r.droitsPereFille))}
+      ${kpi('Patrimoine brut final 3 fils', formatEuro(r.brutFils))}
+      ${kpi('Patrimoine net final 3 fils', formatEuro(r.netFils))}
+      ${kpi('Net par fils', formatEuro(r.netParFils))}
+      ${kpi('Part de maison de la fille', pct(r.maisonPartEnfantPct*100,2))}
+      ${kpi('Prix fiscal de rachat', formatEuro(r.prixFiscal))}
+      ${kpi('Prix négocié saisi', formatEuro(r.prixDemande))}
+      ${kpi('Coût total pour les fils', formatEuro(r.coutTotalFils),'big')}
+      ${r.creanceQuasiUsufruit>0?kpi('Créance de restitution (non déduite)', formatEuro(r.creanceQuasiUsufruit)):''}
+    </div>
+    <p class="hint" style="margin-top:.5rem">${note}</p>
+  </div>`;
+}
+
+function renderOpt(){
+  return `<div class="card">
+    <h2>Les trois options</h2>
+    <p class="hint">Ce que reçoit chacun immédiatement, ce que cela coûte en droits aux deux décès, et ce qu\'il reste au bout du compte. La barre colorée montre comment se découpe la succession du père.</p>
+    ${!S.ddvPresente?'<p class="warn">⚠ Sans donation au dernier vivant, seules les options C et D sont réellement ouvertes.</p>':''}
+  </div>
+  ${SCEN.map(s=>scenarioCard(R.map[s.id])).join('')}
+  <div class="card">
+    <h3>Droits totaux par option</h3>
+    ${barChart(SCEN.map(s=>({label:s.tag+' · '+s.short, value:R.map[s.id].droitsTotaux})),'Droits (père + mère, tous héritiers)')}
+  </div>
+  <div class="card">
+    <h3>Coût total pour les 3 fils : droits + rachat de la sœur</h3>
+    ${barChart(SCEN.map(s=>({label:s.tag, value:R.map[s.id].coutTotalFils})),'Droits des fils + prix de rachat + frais')}
+  </div>`;
+}
+
+/* ============================================================================
+   8. ONGLET 3 — RACHAT DE LA SŒUR
+   ========================================================================== */
+function renderRachat(){
+  const v = R.seuil;
+  const verdictTxt = v.verdict==='B' ? '1/4 PP + 3/4 usufruit préférable'
+                   : v.verdict==='A' ? '100 % usufruit préférable' : 'Quasi équivalent';
+  const verdictCls = v.verdict==='B' ? 'tone-v' : v.verdict==='A' ? 'tone-o' : 'tone-g';
+  return `<div class="card">
+    <h2>Racheter la part de la fille ${tip('soulte')}</h2>
+    <p class="hint">La fille détient une fraction de la maison dans chaque option. Le prix fiscal sert à calculer les droits — il ne s\'impose pas à elle. ${tip('valeur')}</p>
+  </div>
+
+  <div class="card">
+    <h3>Sa part selon l'option</h3>
+    <div class="tw"><table class="sticky">
+      <thead><tr><th>Option</th><th class="n">% de la maison</th><th class="n">Valeur fiscale</th><th class="n">Valeur pleine aujourd'hui</th><th class="n">Valeur pleine future</th><th class="n">Prix demandé</th></tr></thead>
+      <tbody>${SCEN.map(s=>{const r=R.map[s.id]; return `<tr>
+        <td>${s.tag} · ${esc(s.short)}</td>
+        <td class="n">${pct(r.maisonPartEnfantPct*100,2)}</td>
+        <td class="n">${formatEuro(r.prixFiscal)}</td>
+        <td class="n">${formatEuro(r.prixPlein0)}</td>
+        <td class="n">${formatEuro(r.prixPleinFutur)}</td>
+        <td class="n">${formatEuro(r.prixDemande)}</td></tr>`}).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="grid c2">
+    ${SCEN.map(s=>{const r=R.map[s.id]; return `<div class="card">
+      <h4>${s.tag} — ${esc(s.label)}</h4>
+      ${slider('prix.'+s.id,{label:'Prix demandé par la fille',min:0,max:Math.max(400000,Math.round(r.prixPleinFutur*1.5)),step:1000,
+        hint:'<span class="num">'+formatEuro(S.prix[s.id])+'</span>'})}
+      <div class="btns">
+        <button class="btn" data-price="${s.id}" data-mode="fiscal">Prix fiscal</button>
+        <button class="btn" data-price="${s.id}" data-mode="plein">Pleine valeur future</button>
+        <button class="btn" data-price="${s.id}" data-mode="inter">75 % de la valeur future</button>
+      </div>
+      <div class="kpis" style="margin-top:.55rem">
+        ${kpi('Frais d\'acte estimés', formatEuro(r.fraisRachat))}
+        ${kpi('Coût du rachat, tout compris', formatEuro(r.coutRachat))}
+      </div>
+    </div>`}).join('')}
+  </div>
+
+  <div class="card">
+    ${checkbox('rachatActif','Intégrer le rachat dans les calculs de trésorerie')}
+    ${slider('fraisRachat',{label:'Frais et droits sur le rachat',min:0,max:9,step:.1,unit:'%',tip:'soulte',
+      hint:'2,5 % si l\'opération est qualifiée de partage entre héritiers ; 5,80 % + émoluments si elle est qualifiée de vente. Sur le prix fiscal actuel ('+formatEuro(R.map.A.prixFiscal)+'), l\'écart atteint '+formatEuro(R.map.A.prixFiscal*0.033)+'.'})}
+  </div>
+
+  <div class="card ${verdictCls}">
+    <h3>Seuil de bascule entre A et B</h3>
+    <div class="kpis">
+      ${kpi('Surcoût fiscal de B vs A (3 fils)', formatEuro(v.surcoutFiscalB))}
+      ${kpi('Économie de rachat B vs A', formatEuro(v.economieRachat))}
+      ${kpi('Écart net', formatEuro(v.delta),'big')}
+    </div>
+    <p style="margin-top:.5rem"><b>${verdictTxt}</b></p>
+    <p class="hint">Économie de rachat ${formatEuro(v.economieRachat)} − surcoût fiscal ${formatEuro(v.surcoutFiscalB)} = ${formatEuro(v.delta)}.
+    B devient préférable dès que le prix négocié en A dépasse le prix en B de plus de ${formatEuro(v.surcoutFiscalB)} (frais inclus).</p>
+  </div>
+
+  <div class="card">
+    <h3>Différence de prix de rachat entre options</h3>
+    ${barChart(SCEN.map(s=>({label:s.tag, value:R.map[s.id].prixDemande})),'Prix négocié saisi')}
+  </div>`;
+}
+/* ============================================================================
+   9. GRAPHIQUES (SVG, sans dépendance)
+   ========================================================================== */
+function barChart(data, caption){
+  const W=520, H=Math.max(90, data.length*34+26), L=118, R2=64;
+  const max = Math.max(1, ...data.map(d=>Math.abs(d.value)));
+  const bars = data.map((d,i)=>{
+    const y = 8+i*34, w = (W-L-R2)*Math.abs(d.value)/max;
+    return `<text class="glab" x="${L-6}" y="${y+16}" text-anchor="end">${esc(d.label)}</text>
+      <rect x="${L}" y="${y+4}" width="${Math.max(1,w)}" height="17" rx="2" fill="var(--seal)" opacity="${.35+.6*Math.abs(d.value)/max}"></rect>
+      <text class="gval" x="${L+w+6}" y="${y+17}">${formatEuro(d.value)}</text>`;
+  }).join('');
+  return `<figure style="margin:0"><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(caption)}">
+    <line class="axis" x1="${L}" y1="4" x2="${L}" y2="${H-6}"></line>${bars}</svg>
+    <figcaption class="mini">${esc(caption)}</figcaption></figure>`;
+}
+function lineChart(series, caption, xlabels){
+  const W=520,H=190,L=64,B=28,T=10,Rr=10;
+  const all = series.flatMap(s=>s.points);
+  const maxY = Math.max(1,...all), minY = Math.min(0,...all);
+  const n = series[0].points.length;
+  const x = i => L + (W-L-Rr)*(n<2?0:i/(n-1));
+  const y = v => T + (H-T-B)*(1-(v-minY)/((maxY-minY)||1));
+  const cols=['var(--seal)','var(--sage)','var(--amber)','var(--gris)'];
+  const paths = series.map((s,k)=>`<path d="${s.points.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(p).toFixed(1)).join(' ')}"
+      fill="none" stroke="${cols[k%4]}" stroke-width="2"></path>`).join('');
+  const leg = series.map((s,k)=>`<span class="mini"><i style="display:inline-block;width:14px;height:2px;background:${cols[k%4]};vertical-align:middle;margin-right:4px"></i>${esc(s.name)}</span>`).join(' ');
+  const ticks = xlabels.map((l,i)=>`<text class="glab" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(l)}</text>`).join('');
+  return `<figure style="margin:0"><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(caption)}">
+    <line class="axis" x1="${L}" y1="${T}" x2="${L}" y2="${H-B}"></line>
+    <line class="axis" x1="${L}" y1="${H-B}" x2="${W-Rr}" y2="${H-B}"></line>
+    <text class="glab" x="${L-6}" y="${y(maxY)+4}" text-anchor="end">${formatEuro(maxY)}</text>
+    <text class="glab" x="${L-6}" y="${y(minY)}" text-anchor="end">${formatEuro(minY)}</text>
+    ${paths}${ticks}</svg>
+    <figcaption class="mini">${esc(caption)}<br>${leg}</figcaption></figure>`;
+}
+
+/* ============================================================================
+   10. ONGLET 4 — DÉCÈS DE MAMAN
+   ========================================================================== */
+function renderMere(){
+  return `<div class="card">
+    <h2>Au décès de la mère</h2>
+    <p class="hint">L\'usufruit s\'éteint sans nouvelle taxation ${tip('extinction')}. Seul ce que la mère détenait en pleine propriété est transmis, et il va aux 3 fils : la fille du père n\'hérite pas d\'elle ${tip('nonCommun')}.</p>
+    ${slider('consoMere',{label:'Patrimoine financier consommé par la mère de son vivant',min:0,max:100,step:5,unit:'%'})}
+    ${slider('anneesDecesMere',{label:'Années avant son décès (hypothèse)',min:0,max:40,step:1})}
+  </div>
+
+  <div class="card tone-g">
+    <h3>Créance de restitution des enfants ${tip('quasi')}</h3>
+    <p class="hint">L'usufruit portant sur des sommes d'argent devient un quasi-usufruit : la mère peut les employer librement, et les enfants détiennent en contrepartie une créance sur sa succession. Cette créance vient normalement <b>en déduction</b> de son actif taxable au second décès.</p>
+    <div class="kpis">
+      ${SCEN.filter(s=>R.map[s.id].creanceQuasiUsufruit>0).map(s=>
+        kpi(s.tag+' — assiette du quasi-usufruit', formatEuro(R.map[s.id].creanceQuasiUsufruit))).join('') ||
+        '<p class="mini">Aucune : renseignez les comptes et titres du père dans l\'onglet 6 pour voir apparaître le montant concerné.</p>'}
+    </div>
+    <p class="warn">⚠ Montant indicatif, <b>volontairement non déduit</b> des masses et des droits affichés ailleurs. Les droits du second décès sont donc majorés par rapport à ce qu'ils seraient si la créance était retenue. Sa déductibilité suppose un écrit — convention de quasi-usufruit ou mention dans la déclaration de succession — et a été resserrée par la loi de finances 2024 : point à faire trancher par le notaire.</p>
+  </div>
+
+  ${SCEN.map(s=>{const r=R.map[s.id]; return `<div class="card">
+    <div class="scnhead"><span class="tag">${s.tag}</span><h3>${esc(s.label)}</h3></div>
+    <div class="kpis">
+      ${kpi('Part de maison dans sa succession', pct(r.pctMaisonMere*100,2))}
+      ${kpi('Valeur de cette part', formatEuro(r.maisonMereFinale))}
+      ${kpi('Financier restant', formatEuro(r.finMereFinal))}
+      ${kpi('Passif déduit', formatEuro(r.passifMere))}
+      ${kpi('Masse successorale', formatEuro(r.masseMere),'big')}
+      ${kpi('Par fils', formatEuro(r.parFils))}
+      ${kpi('Droits des 3 fils', formatEuro(r.droitsMereFils),'big')}
+    </div>
+    <details><summary>Détail des droits par fils</summary>
+      <div class="calc">${HEIRS.filter(h=>h.son).map(h=>{const d=r.droitsMere[h.id]; if(!d.succ) return '';
+        return `${h.name} : reçu ${formatEuro(d.succ.montant)} · abattement ${formatEuro(d.succ.abattementUtilise)}`
+        + (d.succ.donations?` (réduit de ${formatEuro(d.succ.donations)} par donation antérieure)`:'')
+        + ` · base ${formatEuro(d.succ.baseTotale)} → droits ${formatEuro(d.droits)}\n`
+        + d.succ.tranches.map(t=>`    ${formatEuro(t.assiette)} à ${t.taux} % = ${formatEuro(t.droits)}`).join('\n')
+        + (d.succ.rappelTranches?`\n    − droits déjà supportés sur la donation rappelée : ${formatEuro(d.succ.droitsDonation)}`:'');}).join('\n')}</div>
+    </details>
+    ${s.id==='B'||s.id==='C' ? `<p class="hint">Sa succession comprend sa quote-part initiale (${S.partMere} %) plus le quart de la part du père reçu en pleine propriété, soit ${pct(r.pctMaisonMere*100,2)} de la maison.</p>`:''}
+  </div>`}).join('')}
+
+  <div class="card">
+    <h3>Droits au décès de la mère, par option</h3>
+    ${barChart(SCEN.map(s=>({label:s.tag, value:R.map[s.id].droitsMereFils})),'Droits des 3 fils au second décès')}
+  </div>`;
+}
+
+/* ============================================================================
+   11. ONGLET 5 — VENTE FUTURE
+   ========================================================================== */
+function renderVente(){
+  const vFut = S.maisonValeur*growth(S.anneesVente);
+  return `<div class="card">
+    <h2>Vente future de la maison</h2>
+    <div class="grid c2">
+      <div>
+        ${slider('anneesVente',{label:'Années avant la vente',min:0,max:40,step:1})}
+        ${slider('croissance',{label:'Croissance annuelle',min:-3,max:8,step:.5,unit:'%/an'})}
+        ${numfield('_venteVal','Valeur de vente visée (recalcule le taux)',{hint:'Saisir une valeur cible pour en déduire le taux annuel implicite.'})}
+      </div>
+      <div>
+        <div class="kpis">
+          ${kpi('Valeur aujourd\'hui', formatEuro(S.maisonValeur))}
+          ${kpi('Valeur à la vente', formatEuro(vFut),'big')}
+          ${kpi('Taux annuel', pct(S.croissance,2))}
+        </div>
+        ${selectf('venteQuand','Moment de la vente',[
+          ['apres_pere','Juste après le décès du père'],
+          ['vivant_mere','Du vivant de la mère'],
+          ['apres_mere','Après le décès de la mère'],
+          ['aucune','Aucune vente']],{tip:'indivision'})}
+      </div>
+    </div>
+    <p class="hint">${esc(R.map.A.vente.contexte)}</p>
+  </div>
+
+  <div class="card">
+    <h3>Ce qui est vendable, ce qui est bloqué</h3>
+    <div class="tw"><table class="sticky">
+      <thead><tr><th>Option</th><th class="n">Part libre</th><th class="n">Part grevée d'usufruit</th><th class="n">Produit brut</th><th class="n">Impôt de plus-value</th><th class="n">Cash nécessaire avant</th><th class="n">Net récupéré</th></tr></thead>
+      <tbody>${SCEN.map(s=>{const r=R.map[s.id], v=r.vente; return `<tr>
+        <td>${s.tag} · ${esc(s.short)}</td>
+        <td class="n">${pct(v.vendable*100,1)}</td>
+        <td class="n">${pct(v.bloque*100,1)}</td>
+        <td class="n">${formatEuro(v.brut)}</td>
+        <td class="n">${formatEuro(v.impotPV)}</td>
+        <td class="n">${formatEuro(r.cashAvantVente)}</td>
+        <td class="n">${formatEuro(v.netApresVente)}</td></tr>`}).join('')}</tbody>
+    </table></div>
+    <p class="hint">« Part libre » = fraction détenue en pleine propriété par le groupe. Elle ne dispense pas de l\'accord de tous les indivisaires ${tip('indivision')} : c\'est une mesure du blocage juridique, pas une autorisation de vendre seul.</p>
+  </div>
+
+  <div class="card tone-o">
+    <h3>Plus-value immobilière — mode simplifié ${tip('pv')}</h3>
+    ${checkbox('pvAbattement','Appliquer les abattements pour durée de détention')}
+    ${checkbox('pvExoResidence','Exonération résidence principale du vendeur')}
+    ${slider('pvTaux',{label:'Taux forfaitaire si abattements désactivés',min:0,max:50,step:.1,unit:'%'})}
+    <div class="tw"><table>
+      <thead><tr><th>Option</th><th class="n">Valeur d'acquisition</th><th class="n">Plus-value</th><th class="n">Taux effectif</th><th class="n">Impôt</th></tr></thead>
+      <tbody>${SCEN.map(s=>{const v=R.map[s.id].vente; return `<tr><td>${s.tag}</td>
+        <td class="n">${formatEuro(v.acqui)}</td><td class="n">${formatEuro(v.pv)}</td>
+        <td class="n">${pct(v.tauxEffectif,2)}</td><td class="n">${formatEuro(v.impotPV)}</td></tr>`}).join('')}</tbody>
+    </table></div>
+    <p class="warn">⚠ Calcul simplifié, à valider par notaire, surtout en cas d\'usufruit/nue-propriété et de résidence principale. La surtaxe sur les plus-values supérieures à 50 000 € et les frais déductibles ne sont pas intégrés.</p>
+  </div>
+
+  <div class="card">
+    <h3>Effet d'une hausse de la maison sur le coût total des 3 fils</h3>
+    ${(()=>{
+      const base=S.maisonValeur, labels=[], series=SCEN.map(s=>({name:s.tag+' · '+s.short, points:[]}));
+      for(let k=0;k<=5;k++){
+        const v = base*(1+k*0.1);
+        labels.push(Math.round(v/1000)+' k');
+        const save=S.maisonValeur; S.maisonValeur=v;
+        SCEN.forEach((s,i)=>{ series[i].points.push(computeScenario(s).coutTotalFils); });
+        S.maisonValeur=save;
+      }
+      return lineChart(series,'Coût total (droits + rachat) selon la valeur de la maison, prix négociés inchangés',labels);
+    })()}
+    <p class="hint">Les prix négociés restent figés dans ce graphique : si la fille indexe sa demande sur la valeur du bien, les courbes se rapprochent.</p>
+  </div>`;
+}
+
+/* ============================================================================
+   12. ONGLET 6 — ASSURANCE-VIE / COMPTES / TITRES
+   ========================================================================== */
+function assetRow(a,i){
+  return `<div class="card">
+    <div class="grid c2">
+      <div class="field"><span>Actif</span><input type="text" data-asset="${i}" data-f="nom" value="${esc(a.nom)}"></div>
+      <div class="field"><span>Montant</span><input type="number" data-asset="${i}" data-f="montant" step="1000" value="${a.montant}"></div>
+      <div class="field"><span>Propriétaire</span><select data-asset="${i}" data-f="prop">
+        ${[['pere','Père'],['mere','Mère'],['commun','Commun (50/50)']].map(([v,t])=>`<option value="${v}" ${a.prop===v?'selected':''}>${t}</option>`).join('')}</select></div>
+      <div class="field"><span>Régime fiscal</span><select data-asset="${i}" data-f="regime">
+        ${[['succ','Succession classique'],['pea','PEA (clôturé au décès)'],['obseques','Frais funéraires'],
+           ['exo','Exonéré'],['passif','Passif déductible'],['verif','À vérifier']]
+          .map(([v,t])=>`<option value="${v}" ${a.regime===v?'selected':''}>${t}</option>`).join('')}</select></div>
+      ${a.regime==='pea'?`<div class="field"><span>Dont gains latents</span>
+        <input type="number" data-asset="${i}" data-f="gains" step="1000" value="${a.gains||0}">
+        <span class="mini">Prélèvements sociaux ${pct(S.tauxPS,2)} dus au décès : ${formatEuro((a.gains||0)*S.tauxPS/100)}</span></div>`:''}
+      ${a.regime==='obseques'?`<p class="hint">Déductible dans la limite de ${formatEuro(S.plafondObseques)}.</p>`:''}
+    </div>
+  </div>`;
+}
+function avBlock(path, titre, apres70){
+  const o = get(path);
+  const s = sumSplit(o.split);
+  return `<div class="card ${Math.abs(s-100)>0.5?'tone-r':''}">
+    <h4>${esc(titre)} ${tip(apres70?'av70p':'av70m')}</h4>
+    ${numfield(path+'.primes', apres70?'Primes versées après 70 ans':'Capital transmis (primes avant 70 ans)',{step:1000})}
+    ${apres70?numfield(path+'.gains','Gains produits par ces primes',{step:1000,hint:'En principe exonérés (art. 757 B CGI) — saisis séparément pour pouvoir tester l\'hypothèse inverse.'}):''}
+    <div class="tw"><table><thead><tr><th>Bénéficiaire</th><th class="n">Part</th><th class="n">Montant</th></tr></thead><tbody>
+    ${BENEFS.map(b=>`<tr><td>${b.name}</td>
+      <td class="n"><input type="number" data-bind="${path}.split.${b.id}" data-kind="number" step="1" value="${o.split[b.id]}" style="width:5.5rem"> %</td>
+      <td class="n">${formatEuro((o.primes||0)*(o.split[b.id]||0)/100)}</td></tr>`).join('')}
+    </tbody></table></div>
+    <p class="${Math.abs(s-100)>0.5?'warn':'hint'}">Total des parts : ${pct(s,2)}${Math.abs(s-100)>0.5?' — la répartition doit faire 100 %.':''}</p>
+  </div>`;
+}
+function renderFin(){
+  const avP = avPere(), avM = avMere();
+  return `<div class="card">
+    <h2>Patrimoine financier</h2>
+    <p class="hint">Tout est à 0 € par défaut : les résultats affichés ailleurs portent alors sur la seule maison. Renseignez ce qui existe pour compléter la simulation.</p>
+  </div>
+  ${S.assets.map(assetRow).join('')}
+  <div class="card"><button class="btn" data-act="addasset">Ajouter un actif</button></div>
+
+  <div class="card">
+    <h3>Paramètres assurance-vie</h3>
+    ${numfield('av.abatAvant70','Abattement par bénéficiaire (avant 70 ans)',{step:500,tip:'av70m'})}
+    ${slider('av.taux1',{label:'Taux jusqu\'au seuil',min:0,max:40,step:.25,unit:'%'})}
+    ${numfield('av.seuil1','Seuil de passage au taux majoré',{step:10000})}
+    ${slider('av.taux2',{label:'Taux au-delà',min:0,max:50,step:.25,unit:'%'})}
+    ${numfield('av.abatApres70','Abattement global (après 70 ans)',{step:500,tip:'av70p'})}
+    ${checkbox('av.conjointExonere','Le conjoint survivant est exonéré')}
+    ${checkbox('av.taxerGains70plus','Taxer aussi les gains des primes après 70 ans (hypothèse à vérifier)')}
+    <hr class="sep">
+    ${slider('tauxNonParent',{label:'Tarif applicable entre non-parents',min:0,max:60,step:5,unit:'%',
+      hint:'La fille n\'est pas héritière de la mère. Si elle est bénéficiaire d\'un contrat alimenté après 70 ans, la fraction réintégrée relève de ce tarif, pas du barème en ligne directe.'})}
+    ${slider('tauxPS',{label:'Prélèvements sociaux sur les gains de PEA',min:0,max:25,step:.1,unit:'%'})}
+    ${numfield('plafondObseques','Plafond de déduction des frais funéraires',{step:100})}
+  </div>
+
+  <div class="grid c2">
+    ${avBlock('av.pereAvant70','Assurance-vie du père — primes avant 70 ans',false)}
+    ${avBlock('av.pereApres70','Assurance-vie du père — primes après 70 ans',true)}
+    ${avBlock('av.mereAvant70','Assurance-vie de la mère — primes avant 70 ans',false)}
+    ${avBlock('av.mereApres70','Assurance-vie de la mère — primes après 70 ans',true)}
+  </div>
+
+  <div class="card">
+    <h3>Effet fiscal de l'assurance-vie</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Bénéficiaire</th><th class="n">Capital avant 70 (père)</th><th class="n">Prélèvement 990 I</th><th class="n">Primes après 70 réintégrées</th><th class="n">Idem, contrats de la mère</th></tr></thead>
+      <tbody>${BENEFS.map(b=>`<tr><td>${b.name}</td>
+        <td class="n">${formatEuro(avP[b.id].avant70)}</td>
+        <td class="n">${formatEuro(avP[b.id].droits990)}</td>
+        <td class="n">${formatEuro(avP[b.id].reintegreSuccession)}</td>
+        <td class="n">${formatEuro(avM[b.id].reintegreSuccession + avM[b.id].droits990)}</td></tr>`).join('')}</tbody>
+    </table></div>
+    <p class="warn">⚠ À valider selon contrats, dates de versement et clauses bénéficiaires. Un contrat unique peut mélanger des primes avant et après 70 ans ; la clause bénéficiaire prime sur toute autre disposition.</p>
+  </div>`;
+}
+
+/* ============================================================================
+   13. ONGLET 7 — SYNTHÈSE
+   ========================================================================== */
+const QUALIF = {
+  A:{prot:'Maximale — usage et revenus de tout le bien', conflit:'Faible : la fille ne peut pas provoquer le partage de la pleine propriété', force:'Peut demander la conversion de l\'usufruit en rente viagère (art. 759), sauf sur le logement principal'},
+  B:{prot:'Très forte — un quart en propre plus l\'usage du reste', conflit:'Faible à modérée', force:'Même levier de conversion, sur les 3/4 grevés seulement'},
+  C:{prot:'Limitée — un quart seulement, pas d\'usage garanti au-delà', conflit:'Élevée : quatre pleins propriétaires indivis', force:'Peut exiger le partage judiciaire, donc la vente (art. 815)'}
+};
+function verdicts(){
+  const m=R.map, ids=SCEN.map(s=>s.id);
+  const best=(fn,inv)=>ids.reduce((a,b)=> (inv? fn(m[b])>fn(m[a]) : fn(m[b])<fn(m[a])) ?b:a);
+  const lab=id=>id+' · '+SCEN.find(s=>s.id===id).short;
+  const prixFiscal = ids.reduce((o,id)=>{o[id]=m[id].prixFiscal;return o;},{});
+  const prixPlein  = ids.reduce((o,id)=>{o[id]=m[id].prixPleinFutur;return o;},{});
+  const coutSi = (prixMap)=> ids.reduce((a,b)=>{
+    const c=id=>m[id].droitsTotauxFils + prixMap[id]*(1+S.fraisRachat/100);
+    return c(b)<c(a)?b:a;});
+  return [
+    ['Payer le moins de droits', lab(best(r=>r.droitsTotaux)), 'Toutes successions confondues, tous héritiers.'],
+    ['Minimiser les droits des 3 fils', lab(best(r=>r.droitsTotauxFils)), ''],
+    ['Racheter la fille au plus bas', lab(best(r=>r.prixFiscal)), 'Au prix fiscal. Le prix réel se négocie.'],
+    ['Protéger la mère', 'A · 100 % US, puis B', 'Usage et revenus de la totalité du bien, sans dépendre des enfants.'],
+    ['Maximiser le patrimoine brut des 3 fils', lab(best(r=>r.brutFils,true)), ''],
+    ['Maximiser le patrimoine net des 3 fils', lab(best(r=>r.netFils,true)), 'Après tous droits et rachat.'],
+    ['Éviter la vente forcée', 'A, puis B', 'L\'usufruit neutralise le droit de provoquer le partage de la pleine propriété.'],
+    ['Avantager la fille du père', lab(best(r=>r.filleFuture,true)), 'En valeur pleine reçue, sans tenir compte du délai d\'attente.'],
+    ['Si la fille accepte le prix fiscal', lab(coutSi(prixFiscal)), 'Coût total pour les fils, droits + rachat au prix fiscal.'],
+    ['Si la fille demande la pleine valeur future', lab(coutSi(prixPlein)), 'Coût total pour les fils, droits + rachat à la valeur pleine.'],
+    ['Coût minimal aux prix actuellement saisis', lab(best(r=>r.coutTotalFils)), '']
+  ];
+}
+function renderSynth(){
+  return `<div class="card">
+    <h2>Synthèse</h2>
+    <p class="hint">Il n\'y a pas une meilleure option, mais une meilleure option <b>pour un objectif donné</b>. Les deux tableaux ci-dessous séparent les chiffres des appréciations.</p>
+    <div class="btns" style="margin-top:.5rem">
+      <button class="btn primary" data-act="copy">Copier la synthèse</button>
+      <button class="btn" data-act="print">Imprimer / PDF</button>
+      <button class="btn" data-act="export">Exporter en JSON</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Meilleure option selon l'objectif</h3>
+    <div class="tw"><table class="sticky">
+      <thead><tr><th>Objectif</th><th>Option</th><th>Précision</th></tr></thead>
+      <tbody>${verdicts().map(([o,v,n])=>`<tr><td>${esc(o)}</td><td><b>${esc(v)}</b></td><td class="mini">${esc(n)}</td></tr>`).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Tableau comparatif</h3>
+    <div class="tw"><table class="sticky">
+      <thead><tr>
+        <th>Scénario</th><th class="n">Droits décès père</th><th class="n">Droits décès mère</th><th class="n">Droits totaux</th>
+        <th class="n">Part fille à racheter</th><th class="n">Prix fiscal</th><th class="n">Prix négocié</th><th class="n">Cash avant vente</th>
+        <th class="n">Brut 3 fils</th><th class="n">Net 3 fils</th><th class="n">Net par fils</th><th class="n">Part fille si non rachetée</th>
+      </tr></thead>
+      <tbody>${SCEN.map(s=>{const r=R.map[s.id]; return `<tr>
+        <td>${s.tag} · ${esc(s.short)}</td>
+        <td class="n">${formatEuro(r.droitsPereFils+r.droitsPereFille)}</td>
+        <td class="n">${formatEuro(r.droitsMereFils)}</td>
+        <td class="n">${formatEuro(r.droitsTotaux)}</td>
+        <td class="n">${pct(r.maisonPartEnfantPct*100,2)}</td>
+        <td class="n">${formatEuro(r.prixFiscal)}</td>
+        <td class="n">${formatEuro(r.prixDemande)}</td>
+        <td class="n">${formatEuro(r.cashAvantVente)}</td>
+        <td class="n">${formatEuro(r.brutFils)}</td>
+        <td class="n">${formatEuro(r.netFils)}</td>
+        <td class="n">${formatEuro(r.netParFils)}</td>
+        <td class="n">${formatEuro(r.filleFuture)}</td></tr>`}).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Appréciations qualitatives</h3>
+    <div class="tw"><table class="sticky">
+      <thead><tr><th>Scénario</th><th>Protection de la mère</th><th>Risque d'indivision</th><th>Ce que la fille peut imposer ${tip('conversion')}</th></tr></thead>
+      <tbody>${SCEN.map(s=>`<tr><td>${s.tag} · ${esc(s.short)}</td>
+        <td class="mini">${esc(QUALIF[s.id].prot)}</td>
+        <td class="mini">${esc(QUALIF[s.id].conflit)}</td>
+        <td class="mini">${esc(QUALIF[s.id].force)}</td></tr>`).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card"><h4>Patrimoine net par fils</h4>
+      ${barChart(SCEN.map(s=>({label:s.tag, value:R.map[s.id].netParFils})),'Après droits et rachat')}</div>
+    <div class="card"><h4>Valeur pleine revenant à la fille</h4>
+      ${barChart(SCEN.map(s=>({label:s.tag, value:R.map[s.id].filleFuture})),'Si sa part n\'est pas rachetée')}</div>
+  </div>
+
+  <div class="card">
+    <h3>Hypothèses retenues</h3>
+    <div class="calc">${[
+      'Maison : '+formatEuro(S.maisonValeur)+'  ·  père '+S.partPere+' %  ·  mère '+S.partMere+' %',
+      'Mère née le '+S.naissanceMere+', décès du père le '+S.decesPere+' → '+ageMere()+' ans',
+      'Usufruit fiscal '+pct(calcUsufruitRate()*100,0)+'  ·  nue-propriété '+pct(calcBareOwnershipRate()*100,0),
+      'Abattement '+formatEuro(S.abattement)+' par enfant et par parent  ·  donations imputées : '+(S.donationsActives?'oui':'non'),
+      'Enfants du père : '+S.nbEnfantsPere+'  ·  fils héritiers de la mère : '+S.nbFils,
+      'Donation au dernier vivant : '+(S.ddvPresente?'oui':'non'),
+      'Croissance maison '+pct(S.croissance,2)+'/an  ·  décès de la mère dans '+S.anneesDecesMere+' ans  ·  vente dans '+S.anneesVente+' ans',
+      'Frais sur rachat '+pct(S.fraisRachat,2)+'  ·  rachat intégré : '+(S.rachatActif?'oui':'non')
+    ].join('\n')}</div>
+  </div>`;
+}
+
+/* ============================================================================
+   14. ONGLET 8 — EXPLICATIONS + DÉTAIL DES CALCULS + TESTS
+   ========================================================================== */
+function renderExpl(){
+  const r = R.map.A;
+  return `<div class="card">
+    <h2>Explications</h2>
+    <p class="hint">Chaque terme ci-dessous ouvre une fiche courte, avec un niveau de fiabilité : <span class="lvl ok">Confirmé</span> règle générale · <span class="lvl chk">À vérifier</span> dépend de l\'acte, du contrat ou du notaire · <span class="lvl risk">Risque</span> point pouvant changer fortement le résultat.</p>
+    <div class="btns" style="margin-top:.6rem">${Object.keys(TIPS).map(k=>`<button class="btn q" type="button" data-tip="${k}" style="width:auto;height:auto;border-radius:999px;padding:.35rem .7rem;font-family:inherit">${esc(TIPS[k][0])}</button>`).join('')}</div>
+  </div>
+
+  <div class="card tone-o">
+    <h3>Trois points à faire trancher avant toute décision</h3>
+    <ol style="padding-left:1.1rem;font-size:.87rem">
+      <li style="margin:.4rem 0"><b>L\'existence d\'une donation au dernier vivant.</b> En présence d\'un enfant non commun, l\'option légale du conjoint se limite au quart en pleine propriété. Les scénarios A et B supposent une libéralité entre époux. Sans elle, la comparaison se réduit à C et D.</li>
+      <li style="margin:.4rem 0"><b>La conversion de l\'usufruit en rente viagère.</b> La fille, nue-propriétaire, peut la demander en justice. Elle n\'est pas sans recours face à un usufruit ${tip('conversion')}.</li>
+      <li style="margin:.4rem 0"><b>La qualification fiscale du rachat.</b> Partage entre héritiers à 2,5 % ou vente à 5,80 % : sur ${formatEuro(R.map.A.prixFiscal)} l\'écart dépasse ${formatEuro(R.map.A.prixFiscal*0.033)} ${tip('soulte')}.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>Détail des calculs — option A, fille du père</h3>
+    <div class="calc">${[
+      'Part du père dans la maison   = '+formatEuro(S.maisonValeur)+' × '+S.partPere+' % = '+formatEuro(r.maisonPere),
+      'Masse successorale du père    = '+formatEuro(r.maisonPere)+' + financier '+formatEuro(r.finPere)+' − passif '+formatEuro(r.passifPere)+' = '+formatEuro(r.massePere),
+      'Quote-part revenant aux enfants = '+pct(r.rest*100,0)+' → '+formatEuro(r.massePere*r.rest),
+      'Par enfant (÷ '+S.nbEnfantsPere+')        = '+formatEuro(r.partPleineEnfant)+'  (valeur pleine future)',
+      'Taux de nue-propriété          = '+pct(r.np*100,0)+'  (mère de '+ageMere()+' ans, art. 669 CGI)',
+      'Assiette taxable de la fille   = '+formatEuro(r.partPleineEnfant)+' × '+pct(r.np*100,0)+' = '+formatEuro(r.partFiscaleEnfant),
+      'Abattement                     = '+formatEuro(r.droitsPere.fille.succ.abattementUtilise),
+      'Base taxable                   = '+formatEuro(r.droitsPere.fille.succ.base),
+      ...r.droitsPere.fille.succ.tranches.map(t=>'   tranche '+formatEuro(t.de)+' → '+formatEuro(t.a)+' : '+formatEuro(t.assiette)+' × '+t.taux+' % = '+formatEuro(t.droits)),
+      'Droits dus par la fille        = '+formatEuro(r.droitsPere.fille.droits)
+    ].join('\n')}</div>
+  </div>
+
+  <div class="card">
+    <h3>Détail par option</h3>
+    ${SCEN.map(s=>{const x=R.map[s.id]; return `<details><summary>${s.tag} — ${esc(s.label)}</summary><div class="calc">${[
+      'Mère en pleine propriété : '+formatEuro(x.merePP),
+      'Fraction grevée d\'usufruit : '+pct(x.enUsufruit*100,0)+' → valeur fiscale de l\'usufruit '+formatEuro(x.mereUsuF)+' (non taxée)',
+      'Par enfant : valeur pleine '+formatEuro(x.partPleineEnfant)+' · assiette '+formatEuro(x.partFiscaleEnfant),
+      'Droits au décès du père : fils '+formatEuro(x.droitsPereFils)+' · fille '+formatEuro(x.droitsPereFille),
+      'Succession de la mère : '+formatEuro(x.masseMere)+' → par fils '+formatEuro(x.parFils)+' → droits '+formatEuro(x.droitsMereFils),
+      'Patrimoine brut 3 fils : '+formatEuro(x.brutFils)+' → net '+formatEuro(x.netFils),
+      'Rachat : prix '+formatEuro(x.prixDemande)+' + frais '+formatEuro(x.fraisRachat)+' = '+formatEuro(x.coutRachat),
+      'Coût total pour les 3 fils : '+formatEuro(x.coutTotalFils)
+    ].join('\n')}</div></details>`}).join('')}
+  </div>
+
+  <div class="card">
+    <h3>Contrôle des assiettes</h3>
+    <p class="hint">Vérification que rien n'est perdu ni compté deux fois : la somme des assiettes taxables des enfants, plus la valeur fiscale de l'usufruit, plus ce que la mère prend en pleine propriété, doit reconstituer exactement la masse successorale du père.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Option</th><th class="n">Masse du père</th><th class="n">Mère en PP</th><th class="n">Usufruit (valeur fiscale)</th><th class="n">Assiettes des 4 enfants</th><th class="n">Écart</th></tr></thead>
+      <tbody>${SCEN.map(s=>{const x=R.map[s.id];
+        const somme = x.merePP + x.mereUsuF + x.partFiscaleEnfant*S.nbEnfantsPere;
+        const ecart = somme - x.massePere;
+        return `<tr><td>${s.tag}</td>
+          <td class="n">${formatEuro(x.massePere)}</td>
+          <td class="n">${formatEuro(x.merePP)}</td>
+          <td class="n">${formatEuro(x.mereUsuF)}</td>
+          <td class="n">${formatEuro(x.partFiscaleEnfant*S.nbEnfantsPere)}</td>
+          <td class="n">${Math.abs(ecart)<1?'<span class="badge b-v">0</span>':'<span class="badge b-r">'+formatEuro(ecart)+'</span>'}</td></tr>`}).join('')}</tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Tests internes</h3>
+    <div id="tests"></div>
+    <p class="hint">Ces tests reproduisent les valeurs de référence. Ils sont aussi affichés dans la console du navigateur. Ils sont exécutés sur les hypothèses de référence, indépendamment des valeurs actuellement saisies.</p>
+  </div>
+
+  <div class="card tone-g">
+    <h3>Confidentialité et données</h3>
+    <ul class="tight">
+      <li>Aucun serveur, aucune requête réseau, aucun envoi : les calculs se font entièrement dans le navigateur.</li>
+      <li>Les valeurs saisies sont enregistrées dans le navigateur de chacun, sur son propre appareil. Elles ne circulent pas d'une personne à l'autre et ne remontent nulle part.</li>
+      <li>Le fichier publié ne contient aucun chiffre : tout démarre à zéro.</li>
+      <li>Effacer l'historique ou les données de site supprime les valeurs. L'export JSON est la seule copie durable.</li>
+      <li><b>Un dépôt GitHub Pages gratuit est public et l'historique Git est définitif.</b> Si une version contenant des chiffres réels a déjà été poussée, l'effacer aujourd'hui ne suffit pas : il faut réécrire l'historique ou supprimer puis recréer le dépôt.</li>
+    </ul>
+  </div>
+
+  <div class="card tone-g">
+    <h3>Ce que ce simulateur ne fait pas</h3>
+    <ul class="tight">
+      <li>Le rapport civil des donations et la réduction pour atteinte à la réserve ${tip('reserve')}.</li>
+      <li>La créance de restitution en cas de quasi-usufruit sur les liquidités ${tip('quasi')}.</li>
+      <li>Le droit viager au logement de la mère, qui s\'ajoute aux droits successoraux ${tip('logement')}.</li>
+      <li>Le paiement différé ou fractionné des droits, qui modifie fortement le besoin de trésorerie ${tip('differe')}.</li>
+      <li>Les frais de notaire de la déclaration de succession et du partage.</li>
+      <li>L\'impact du régime matrimonial sur la composition de la masse.</li>
+    </ul>
+  </div>`;
+}
+
+/* ============================================================================
+   15. PANNEAU ERREURS / INCOHÉRENCES
+   ========================================================================== */
+function renderErrors(){
+  const e=[];
+  if(Math.abs(S.partPere+S.partMere-100)>0.01)
+    e.push(['r','Les quote-parts de la maison totalisent '+(S.partPere+S.partMere)+' % au lieu de 100 %.']);
+  if(S.maisonValeur<0 || S.abattement<0 || S.assets.some(a=>a.montant<0))
+    e.push(['r','Une valeur négative a été saisie.']);
+  for(const [k,t] of [['pereAvant70','père avant 70'],['pereApres70','père après 70'],['mereAvant70','mère avant 70'],['mereApres70','mère après 70']]){
+    const s=sumSplit(S.av[k].split);
+    if(S.av[k].primes>0 && Math.abs(s-100)>0.5) e.push(['r','Répartition des bénéficiaires ('+t+') : '+pct(s,2)+' au lieu de 100 %.']);
+  }
+  if(!S.ddvPresente) e.push(['o','Sans donation au dernier vivant, les options A et B ne sont pas exerçables : elles restent affichées pour comparaison seulement.']);
+  if(S.donationsActives && Object.values(S.don).some(d=>d.mere>0||d.pere>0)){
+    const ans = new Date(S.decesPere).getFullYear()-S.donationAnnee;
+    e.push([ans<15?'o':'g','Une donation antérieure réduit l\'abattement d\'un héritier'+(ans<15?' (moins de 15 ans : rappel fiscal applicable).':' (plus de 15 ans : information conservée mais sans effet).')]);
+  }
+  if(S.nbEnfantsPere<S.nbFils+1) e.push(['o','Le nombre total d\'enfants du père est inférieur au nombre de fils plus la fille.']);
+  if(!e.length) return '';
+  return `<div class="card ${e.some(x=>x[0]==='r')?'tone-r':'tone-o'}">
+    <h4>Points à corriger ou à surveiller</h4>
+    <ul class="tight">${e.map(x=>`<li>${x[1]}</li>`).join('')}</ul></div>`;
+}
+/* ============================================================================
+   16. ONGLETS ET RENDU
+   ========================================================================== */
+const TABS = [
+  {id:'p-hyp',   n:'1', t:'Hypothèses',        r:renderHyp},
+  {id:'p-opt',   n:'2', t:'Options',           r:renderOpt},
+  {id:'p-rachat',n:'3', t:'Rachat de la sœur', r:renderRachat},
+  {id:'p-mere',  n:'4', t:'Décès de maman',    r:renderMere},
+  {id:'p-vente', n:'5', t:'Vente future',      r:renderVente},
+  {id:'p-fin',   n:'6', t:'AV / comptes / titres', r:renderFin},
+  {id:'p-synth', n:'7', t:'Synthèse',          r:renderSynth},
+  {id:'p-expl',  n:'8', t:'Explications',      r:renderExpl}
+];
+
+function buildTabs(){
+  $('#tablist').innerHTML = TABS.map(t=>
+    `<li role="presentation"><button role="tab" data-tab="${t.id}" aria-selected="${t.id===ACTIVE}" aria-controls="${t.id}">
+      <span class="idx">${t.n}</span>${esc(t.t)}</button></li>`).join('');
+}
+
+/** Recalcule et redessine l'onglet actif. */
+function updateUI(){
+  S._venteVal = Math.round(S.maisonValeur*growth(S.anneesVente));
+  R = computeAll();
+  $('#errors').innerHTML = renderErrors();
+  buildTabs();
+  for(const t of TABS){
+    const el = document.getElementById(t.id);
+    if(t.id===ACTIVE){ el.hidden=false; el.innerHTML = t.r(); }
+    else { el.hidden=true; el.innerHTML=''; }
+  }
+  if(ACTIVE==='p-expl') paintTests();
+  planifierSauvegarde();
+}
+
+function showTab(id){
+  ACTIVE = id; $('#pop').hidden = true;
+  updateUI();
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+/* ============================================================================
+   17. LIAISONS
+   ========================================================================== */
+let renderTimer = null;
+function scheduleRender(){
+  clearTimeout(renderTimer);
+  renderTimer = setTimeout(()=>{
+    const a = document.activeElement;
+    const key = a && a.dataset && (a.dataset.bind || a.dataset.asset!==undefined || a.dataset.bareme!==undefined)
+      ? JSON.stringify([a.dataset.bind||'', a.dataset.kind||'', a.dataset.asset||'', a.dataset.f||'', a.dataset.bareme||'', a.dataset.col||''])
+      : null;
+    const sel = a && a.selectionStart;
+    updateUI();
+    if(key){
+      const target = [...document.querySelectorAll('[data-bind],[data-asset],[data-bareme]')].find(n=>
+        JSON.stringify([n.dataset.bind||'', n.dataset.kind||'', n.dataset.asset||'', n.dataset.f||'', n.dataset.bareme||'', n.dataset.col||''])===key);
+      if(target){ target.focus({preventScroll:true});
+        try{ if(sel!=null && target.setSelectionRange) target.setSelectionRange(sel,sel); }catch(_){}
+      }
+    }
+  }, 260);
+}
+
+function applyBind(el, immediate){
+  const path = el.dataset.bind, kind = el.dataset.kind;
+  if(path){
+    let v;
+    if(kind==='check') v = el.checked;
+    else if(kind==='number'||kind==='range') v = num(el.value);
+    else v = el.value;
+    if(path==='_venteVal'){
+      const n = Math.max(1, S.anneesVente);
+      const base = S.maisonValeur||1;
+      S.croissance = v>0 ? (Math.pow(v/base, 1/n)-1)*100 : 0;
+    } else set(path, v);
+    // synchronise le jumeau curseur <-> champ
+    document.querySelectorAll('[data-bind]').forEach(n=>{
+      if(n!==el && n.dataset.bind===path && n.type!=='checkbox') n.value = el.value;
+    });
+  } else if(el.dataset.asset!==undefined){
+    const a = S.assets[+el.dataset.asset], f = el.dataset.f;
+    a[f] = (f==='montant') ? num(el.value) : el.value;
+  } else if(el.dataset.bareme!==undefined){
+    S.bareme[+el.dataset.bareme][+el.dataset.col] = num(el.value);
+  } else return;
+  if(immediate==='twin') return;
+  if(immediate) updateUI(); else scheduleRender();
+}
+
+document.addEventListener('input', e=>{
+  const el = e.target;
+  if(!(el.dataset && (el.dataset.bind || el.dataset.asset!==undefined || el.dataset.bareme!==undefined))) return;
+  if(el.dataset.kind==='range'){ applyBind(el, 'twin'); return; }  // rendu complet au relâchement
+  applyBind(el, false);
+});
+document.addEventListener('change', e=>{
+  const el = e.target;
+  if(!(el.dataset && (el.dataset.bind || el.dataset.asset!==undefined || el.dataset.bareme!==undefined))) return;
+  if(el.dataset.kind==='range' || el.dataset.kind==='check' || el.dataset.kind==='select' || el.tagName==='SELECT'){
+    clearTimeout(renderTimer); applyBind(el, true);
+  }
+});
+
+document.addEventListener('click', e=>{
+  const tab = e.target.closest('[data-tab]');
+  if(tab){ showTab(tab.dataset.tab); return; }
+
+  const price = e.target.closest('[data-price]');
+  if(price){
+    const id = price.dataset.price, r = R.map[id];
+    const v = price.dataset.mode==='fiscal' ? r.prixFiscal
+            : price.dataset.mode==='plein'  ? r.prixPleinFutur
+            : r.prixPleinFutur*0.75;
+    S.prix[id] = Math.round(v); updateUI(); return;
+  }
+
+  const act = e.target.closest('[data-act]');
+  if(!act) return;
+  switch(act.dataset.act){
+    case 'reset':     S = defaults(); sauvegarder(); updateUI();
+                      toast('Valeurs à zéro, sauvegarde écrasée'); break;
+    case 'demo':      S = exemple(); updateUI(); toast('Jeu d\'exemple chargé — chiffres fictifs'); break;
+    case 'preset05':  S.maisonValeur = 500000;  updateUI(); break;
+    case 'preset10':  S.maisonValeur = 1000000; updateUI(); break;
+    case 'preset20':  S.maisonValeur = 2000000; updateUI(); break;
+    case 'export':    exportJSON(); break;
+    case 'import':    $('#fileimport').click(); break;
+    case 'print':     window.print(); break;
+    case 'copy':      copySynthese(); break;
+    case 'addasset':  S.assets.push({id:'x'+Date.now(), nom:'Nouvel actif', montant:0, prop:'commun', regime:'succ'}); updateUI(); break;
+  }
+});
+
+/* ============================================================================
+   18. IMPORT / EXPORT / COPIE
+   ========================================================================== */
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(S,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'simulation-succession.json';
+  a.click(); URL.revokeObjectURL(a.href);
+  toast('Fichier JSON exporté');
+}
+function importJSON(file){
+  const fr = new FileReader();
+  fr.onload = ()=>{
+    try{
+      const data = JSON.parse(fr.result);
+      const base = defaults();
+      S = Object.assign(base, data);
+      S.bareme = (data.bareme||base.bareme).map(b=>[b[0]===null?Infinity:b[0], b[1]]);
+      updateUI(); toast('Simulation importée');
+    }catch(err){ toast('Fichier illisible : '+err.message); }
+  };
+  fr.readAsText(file);
+}
+$('#fileimport').addEventListener('change', e=>{ if(e.target.files[0]) importJSON(e.target.files[0]); e.target.value=''; });
+
+function syntheseTexte(){
+  const L=[];
+  L.push('SIMULATION DE SUCCESSION — indicative, à valider par notaire/fiscaliste');
+  L.push('');
+  L.push('Maison '+formatEuro(S.maisonValeur)+' — père '+S.partPere+' % / mère '+S.partMere+' %');
+  L.push('Mère '+ageMere()+' ans → usufruit '+pct(calcUsufruitRate()*100,0)+', nue-propriété '+pct(calcBareOwnershipRate()*100,0));
+  L.push('Donation au dernier vivant : '+(S.ddvPresente?'oui':'non — options A et B non exerçables'));
+  L.push('');
+  for(const s of SCEN){
+    const r = R.map[s.id];
+    L.push(s.tag+' — '+s.label);
+    L.push('   droits décès père : '+formatEuro(r.droitsPereFils+r.droitsPereFille)
+          +' | décès mère : '+formatEuro(r.droitsMereFils)
+          +' | total : '+formatEuro(r.droitsTotaux));
+    L.push('   part de la fille : '+pct(r.maisonPartEnfantPct*100,2)+' — prix fiscal '+formatEuro(r.prixFiscal)
+          +' — prix négocié '+formatEuro(r.prixDemande));
+    L.push('   cash avant vente : '+formatEuro(r.cashAvantVente)+' | net par fils : '+formatEuro(r.netParFils));
+  }
+  L.push('');
+  L.push('Seuil A/B : économie de rachat '+formatEuro(R.seuil.economieRachat)
+        +' − surcoût fiscal '+formatEuro(R.seuil.surcoutFiscalB)+' = '+formatEuro(R.seuil.delta));
+  L.push('');
+  for(const [o,v] of verdicts()) L.push(o+' → '+v);
+  return L.join('\n');
+}
+function copySynthese(){
+  const txt = syntheseTexte();
+  const done = ()=>toast('Synthèse copiée');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done, ()=>fallback());
+  } else fallback();
+  function fallback(){
+    const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta);
+    ta.select(); try{document.execCommand('copy'); done();}catch(_){toast('Copie impossible');}
+    ta.remove();
+  }
+}
+
+/* ============================================================================
+   19. TESTS INTERNES
+   ========================================================================== */
+/* La console reste muette sauf si l'URL se termine par ?debug=1.
+   Les résultats des tests sont de toute façon affichés dans l'onglet Explications. */
+const DEBUG = (typeof location!=='undefined') && /[?&]debug=1/.test(location.search||'');
+
+function runTests(){
+  const saved = JSON.stringify(S);
+  const out = [];
+  const near = (a,b,tol)=>Math.abs(a-b) <= (tol===undefined?0.5:tol);
+  function scenario(maison, id){
+    S = defaults(); S.maisonValeur = maison;
+    return computeScenario(SCEN.find(s=>s.id===id));
+  }
+  const T = [
+    ['Maison 1 000 000 € — part du père (50 %)', ()=>scenario(1000000,'A').maisonPere, 500000],
+    ['A — valeur pleine future par enfant', ()=>scenario(1000000,'A').partPleineEnfant, 125000],
+    ['A — valeur fiscale par enfant (nue-propriété 60 %)', ()=>scenario(1000000,'A').partFiscaleEnfant, 75000],
+    ['B — valeur pleine future par enfant', ()=>scenario(1000000,'B').partPleineEnfant, 93750],
+    ['B — valeur fiscale par enfant', ()=>scenario(1000000,'B').partFiscaleEnfant, 56250],
+    ['Maison 800 000 €, A — valeur pleine future', ()=>scenario(800000,'A').partPleineEnfant, 100000],
+    ['Maison 800 000 €, A — valeur fiscale', ()=>scenario(800000,'A').partFiscaleEnfant, 60000],
+    ['Maison 800 000 €, B — valeur pleine future', ()=>scenario(800000,'B').partPleineEnfant, 75000],
+    ['Maison 800 000 €, B — valeur fiscale', ()=>scenario(800000,'B').partFiscaleEnfant, 45000],
+    ['C — pleine propriété directe par enfant', ()=>scenario(1000000,'C').partPleineEnfant, 93750],
+    ['Taux de nue-propriété à 66 ans', ()=>{S=defaults(); return calcBareOwnershipRate()*100;}, 60],
+    ['Barème : 200 000 € reçus, abattement 100 000 €', ()=>{S=defaults(); return calcInheritanceTax(200000,100000,0).droits;}, 18194.35],
+    ['Barème : abattement absorbe tout', ()=>{S=defaults(); return calcInheritanceTax(90000,100000,0).droits;}, 0],
+    ['Donation antérieure imputée sur l\'abattement', ()=>{S=defaults(); return calcInheritanceTax(200000,100000,30000).abattementUtilise;}, 70000],
+    ['AV avant 70 ans : 1 000 000 € à un enfant', ()=>{S=defaults(); return calcLifeInsuranceTax(1000000,false).droits;}, 186093.75],
+    ['AV avant 70 ans : conjoint exonéré', ()=>{S=defaults(); return calcLifeInsuranceTax(1000000,true).droits;}, 0],
+    ['B — succession de la mère = 62,5 % de la maison', ()=>scenario(1000000,'B').pctMaisonMere*100, 62.5],
+    ['A — extinction de l\'usufruit non retaxée', ()=>scenario(1000000,'A').pctMaisonMere*100, 50],
+    // --- invariants de conservation des assiettes ---
+    ['Invariant A : PP mère + usufruit + assiettes enfants = masse du père',
+      ()=>{const x=scenario(1000000,'A'); return x.merePP + x.mereUsuF + x.partFiscaleEnfant*4 - x.massePere;}, 0],
+    ['Invariant B : idem', ()=>{const x=scenario(1000000,'B'); return x.merePP + x.mereUsuF + x.partFiscaleEnfant*4 - x.massePere;}, 0],
+    ['Invariant C : idem', ()=>{const x=scenario(1000000,'C'); return x.merePP + x.mereUsuF + x.partFiscaleEnfant*4 - x.massePere;}, 0],
+    ['Passif : dette de 100 000 € au père réduit sa masse',
+      ()=>{S=defaults(); S.maisonValeur=1000000; S.assets.find(a=>a.id==='dettes').montant=200000;
+           S.assets.find(a=>a.id==='dettes').prop='pere';
+           return computeScenario(SCEN[0]).massePere;}, 300000],
+    ['Passif : dette de 200 000 € à la mère réduit SA masse',
+      ()=>{S=defaults(); S.maisonValeur=1000000; S.assets.find(a=>a.id==='dettes').montant=200000;
+           S.assets.find(a=>a.id==='dettes').prop='mere';
+           return computeScenario(SCEN[0]).masseMere;}, 300000],
+    ['Frais funéraires : 8 000 € déduits à hauteur du forfait de 1 500 €',
+      ()=>{S=defaults(); S.maisonValeur=1000000; S.assets.find(a=>a.id==='obseq').montant=8000;
+           return computeScenario(SCEN[0]).massePere;}, 498500],
+    ['Rappel art. 784 : donation de 150 000 € consomme aussi les tranches basses',
+      ()=>{S=defaults(); const sans=calcInheritanceTax(200000,100000,0).droits;
+           const avec=calcInheritanceTax(200000,100000,150000).droits; return avec>sans;}, true],
+    ['AV après 70 : le conjoint exonéré ne consomme pas l\'abattement de 30 500 €',
+      ()=>{S=defaults(); S.av.pereApres70.primes=130500;
+           S.av.pereApres70.split={mere:50,f1:50,f2:0,f3:0,fille:0};
+           return avPere().f1.reintegreSuccession;}, 34750],
+    ['Trois options exposées, plus de renonciation', ()=>SCEN.length, 3],
+    ['Créance de quasi-usufruit calculée mais non déduite de la masse de la mère',
+      ()=>{S=defaults(); S.maisonValeur=1000000;
+           S.assets.find(a=>a.id==='cb_pere').montant=200000;
+           const x=computeScenario(SCEN[0]);
+           return [x.creanceQuasiUsufruit, x.masseMere];}, [200000,500000]],
+    ['PEA : prélèvements sociaux sur les gains passent au passif',
+      ()=>{S=defaults(); S.maisonValeur=1000000;
+           const a=S.assets.find(x=>x.id==='pea'); a.montant=100000; a.gains=50000; a.prop='pere';
+           return computeScenario(SCEN[0]).massePere;}, 591400]
+  ];
+  for(const [nom, fn, attendu] of T){
+    let got, ok=false;
+    try{ got = fn();
+         ok = Array.isArray(attendu) ? attendu.every((v,i)=>near(got[i],v,0.01))
+            : (typeof attendu==='boolean') ? got===attendu
+            : near(got, attendu, Math.max(0.01, Math.abs(attendu)*1e-9)); }
+    catch(err){ got = 'erreur : '+err.message; }
+    out.push({nom, attendu, got, ok});
+  }
+  S = JSON.parse(saved);
+  S.bareme = S.bareme.map(b=>[b[0]===null?Infinity:b[0], b[1]]);
+
+  const pass = out.filter(o=>o.ok).length;
+  if(DEBUG){
+    console.log('%cTests simulateur succession : '+pass+'/'+out.length+' réussis',
+      'font-weight:bold;color:'+(pass===out.length?'#3F6E4E':'#A33A2E'));
+    console.table(out.map(o=>({Test:o.nom, Attendu:o.attendu, Obtenu:typeof o.got==='number'?Math.round(o.got*100)/100:o.got, OK:o.ok})));
+  }
+  return out;
+}
+function paintTests(){
+  const host = document.getElementById('tests'); if(!host) return;
+  const out = runTests(), pass = out.filter(o=>o.ok).length;
+  host.innerHTML = `<p><span class="badge ${pass===out.length?'b-v':'b-r'}">${pass} / ${out.length} réussis</span></p>
+    <div class="tw"><table><thead><tr><th>Test</th><th class="n">Attendu</th><th class="n">Obtenu</th><th></th></tr></thead>
+    <tbody>${out.map(o=>`<tr><td>${esc(o.nom)}</td>
+      <td class="n">${typeof o.attendu==='number'?NF2.format(o.attendu):esc(o.attendu)}</td>
+      <td class="n">${typeof o.got==='number'?NF2.format(Math.round(o.got*100)/100):esc(o.got)}</td>
+      <td>${o.ok?'<span class="badge b-v">OK</span>':'<span class="badge b-r">échec</span>'}</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+/* ============================================================================
+   20. INITIALISATION
+   ========================================================================== */
+charger();          // vide au premier lancement : tout est à zéro
+buildTabs();
+updateUI();
+runTests();
+window.addEventListener('resize', ()=>{ $('#pop').hidden = true; });
+</script>
+</body>
+</html>
